@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="blogProject:war exploded2" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="61c916fa-3ee4-470d-80c0-4429689d0b12" name="Default Changelist" comment="再次初始化">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/blogProject_war_exploded2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/saveactions_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/META-INF/blogProject.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/AdminDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/ArticleDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/CommentDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/DAOFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/FansDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/UserDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/impl/AdminDAOImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/impl/ArticleDAOImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/impl/CommentDAOImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/impl/FansDAOimpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/db/DbConnection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/po/AdminPo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/po/ArticlePo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/po/CommentPo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/po/FansPo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/po/UserPo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/service/ArticleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/service/DetailArticleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/service/ServiceFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/service/impl/ArticleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/service/impl/DetailArticleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/servlet/UploadServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/vo/ArticleVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/vo/DetailArticleVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/vo/UserVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/dao.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/service.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/lib/commons-beanutils-1.8.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/lib/commons-collections-3.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/lib/commons-fileupload-1.3.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/lib/commons-io-2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/lib/commons-lang-2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/lib/commons-logging-1.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/lib/ezmorph-1.0.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/lib/jaxen-1.1.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/lib/json-lib-2.4-jdk15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/lib/mysql-connector-java-5.1.38.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/css/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/css/amazeui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/css/amazeui.datatables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/css/amazeui.flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/css/amazeui.flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/css/amazeui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/css/app_form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/css/form.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/css/lw-admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_i/app-icon72x72@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_i/examples/admin-chrome.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_i/examples/admin-firefox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_i/examples/admin-ie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_i/examples/admin-opera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_i/examples/admin-safari.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_i/examples/adminPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_i/examples/blogPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_i/examples/landing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_i/examples/landingPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_i/examples/loginPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_i/examples/sidebarPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_i/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_i/startup-640x1096.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_img/a5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_img/c4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_img/k.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_img/logoa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_img/logob.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_img/user01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_img/user02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_img/user03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_img/user04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_img/user05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_img/user06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/form_img/user07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/app-icon72x72@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/b1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/b2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/b3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/examples/admin-chrome.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/examples/admin-firefox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/examples/admin-ie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/examples/admin-opera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/examples/admin-safari.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/examples/adminPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/examples/blogPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/examples/landing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/examples/landingPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/examples/loginPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/examples/sidebarPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f16.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f161.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/f8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/i/startup-640x1096.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/amazeui.ie8polyfill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/amazeui.ie8polyfill.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/amazeui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/amazeui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/amazeui.widgets.helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/amazeui.widgets.helper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/handlebars.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/img.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/jquery.waterfall.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/pinto.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/bootstrap-3.3.7-dist/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/font.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.arrow.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.butterbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.colors.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.components.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.item.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.layout.boxed.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.layout.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.nav.dock.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.nav.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.nav.offscreen.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.ng.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.plugin.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.reset.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.utilities.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/less/app.widgets.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/css/simple-line-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/detailArticle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/Simple-Line-Icons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/Simple-Line-Icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/Simple-Line-Icons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/Simple-Line-Icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/sourcesanspro/sourcesanspro-bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/sourcesanspro/sourcesanspro-light.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/fonts/sourcesanspro/sourcesanspro.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/found.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/mes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/wood.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/images/write.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/a0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/a1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/a10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/a2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/a3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/a4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/a5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/a6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/a7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/a8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/a9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/b9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/c0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/c1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/c2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/c3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/c4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/c5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/c6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/c7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/c8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/c9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/p0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/picture1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/picture2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/picture3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/picture4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/picture5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/picture6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/img/picture7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/jquery/jQuery.3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/jquery/jquery3.4.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/calendar/calendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/contact/contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/contact/contacts.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/mail/mail-service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/mail/mail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/mail/mails.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/map/load-google-maps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/map/map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/map/ui-map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/music/ctrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/music/theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/music/videogular.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/note/note.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/note/notes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/weather/angular-skycons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/weather/ctrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/app/weather/skycons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/config.lazyload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/config.router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/editor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/file-upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/grid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/imgcrop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/largeLoad.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/signin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/signup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/toaster.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/upload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/controllers/vectormap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/directives/setnganimate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/directives/ui-butterbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/directives/ui-focus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/directives/ui-fullscreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/directives/ui-jq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/directives/ui-module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/directives/ui-nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/directives/ui-scroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/directives/ui-shift.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/directives/ui-toggleclass.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/directives/ui-validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/filters/fromNow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/js/services/ui-load.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/myconcern.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/otherscenter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/personcenter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/regist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/font/summernote.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/font/summernote.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/font/summernote.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-ar-AR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-bg-BG.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-ca-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-cs-CZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-da-DK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-de-DE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-el-GR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-es-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-es-EU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-fa-IR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-fi-FI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-fr-FR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-gl-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-he-IL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-hr-HR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-hu-HU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-id-ID.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-it-IT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-ja-JP.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-ko-KR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-lt-LT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-lt-LV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-mn-MN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-nb-NO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-nl-NL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-pl-PL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-pt-PT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-ro-RO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-ru-RU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-sk-SK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-sl-SI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-sr-RS-Latin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-sr-RS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-sv-SE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-ta-IN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-th-TH.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-tr-TR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-uk-UA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-uz-UZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-vi-VN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/lang/summernote-zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/plugin/databasic/summernote-ext-databasic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/plugin/databasic/summernote-ext-databasic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/plugin/hello/summernote-ext-hello.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/plugin/specialchars/summernote-ext-specialchars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/summernote-bs4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/summernote-bs4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/summernote-bs4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/summernote-lite.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/summernote-lite.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/summernote-lite.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/summernote.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/summernote.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/summernote/dist/summernote.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/upload/images/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/upload/images/1564816184796.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/upload/images/1564816195132.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/writeArticle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/AdminDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/ArticleDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/CommentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/DAOFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/FansDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/AdminDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/ArticleDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/CommentDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/FansDAOimpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/db/DbConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/po/AdminPo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/po/ArticlePo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/po/CommentPo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/po/FansPo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/po/UserPo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/ArticleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/DetailArticleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/ServiceFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/DetailArticleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/UploadServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/vo/ArticleVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/vo/DetailArticleVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/vo/UserVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dao.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/service.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/amazeui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/amazeui.datatables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/amazeui.flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/amazeui.flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/amazeui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/app_form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/form.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/lw-admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_i/app-icon72x72@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_i/examples/admin-chrome.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_i/examples/admin-firefox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_i/examples/admin-ie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_i/examples/admin-opera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_i/examples/admin-safari.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_i/examples/adminPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_i/examples/blogPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_i/examples/landing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_i/examples/landingPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_i/examples/loginPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_i/examples/sidebarPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_i/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_i/startup-640x1096.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_img/a5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_img/c4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_img/k.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_img/logoa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_img/logob.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_img/user01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_img/user02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_img/user03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_img/user04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_img/user05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_img/user06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/form_img/user07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/app-icon72x72@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/b1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/b2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/b3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/examples/admin-chrome.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/examples/admin-firefox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/examples/admin-ie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/examples/admin-opera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/examples/admin-safari.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/examples/adminPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/examples/blogPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/examples/landing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/examples/landingPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/examples/loginPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/examples/sidebarPage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f16.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f161.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/f8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/i/startup-640x1096.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amazeui.ie8polyfill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amazeui.ie8polyfill.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amazeui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amazeui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amazeui.widgets.helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amazeui.widgets.helper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/handlebars.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/img.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/jquery.waterfall.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/pinto.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/font.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.arrow.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.butterbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.colors.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.components.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.item.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.layout.boxed.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.layout.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.nav.dock.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.nav.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.nav.offscreen.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.ng.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.plugin.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.reset.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.utilities.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/less/app.widgets.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/simple-line-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/detailArticle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/Simple-Line-Icons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/Simple-Line-Icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/Simple-Line-Icons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/Simple-Line-Icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/sourcesanspro/sourcesanspro-bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/sourcesanspro/sourcesanspro-light.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/sourcesanspro/sourcesanspro.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/found.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/mes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/wood.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/write.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/a0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/a1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/a10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/a2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/a3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/a4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/a5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/a6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/a7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/a8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/a9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/b9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/c0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/c1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/c2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/c3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/c4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/c5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/c6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/c7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/c8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/c9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/p0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/picture1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/picture2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/picture3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/picture4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/picture5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/picture6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/picture7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/jQuery.3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jquery/jquery3.4.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/calendar/calendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/contact/contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/contact/contacts.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/mail/mail-service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/mail/mail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/mail/mails.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/map/load-google-maps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/map/map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/map/ui-map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/music/ctrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/music/theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/music/videogular.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/note/note.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/note/notes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/weather/angular-skycons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/weather/ctrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app/weather/skycons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/config.lazyload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/config.router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/editor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/file-upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/grid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/imgcrop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/largeLoad.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/signin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/signup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/toaster.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/upload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/controllers/vectormap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/directives/setnganimate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/directives/ui-butterbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/directives/ui-focus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/directives/ui-fullscreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/directives/ui-jq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/directives/ui-module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/directives/ui-nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/directives/ui-scroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/directives/ui-shift.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/directives/ui-toggleclass.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/directives/ui-validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/filters/fromNow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/services/ui-load.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/myconcern.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/otherscenter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/personcenter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/regist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/font/summernote.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/font/summernote.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/font/summernote.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-ar-AR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-bg-BG.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-ca-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-cs-CZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-da-DK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-de-DE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-el-GR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-es-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-es-EU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-fa-IR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-fi-FI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-fr-FR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-gl-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-he-IL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-hr-HR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-hu-HU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-id-ID.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-it-IT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-ja-JP.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-ko-KR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-lt-LT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-lt-LV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-mn-MN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-nb-NO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-nl-NL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-pl-PL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-pt-PT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-ro-RO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-ru-RU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-sk-SK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-sl-SI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-sr-RS-Latin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-sr-RS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-sv-SE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-ta-IN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-th-TH.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-tr-TR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-uk-UA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-uz-UZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-vi-VN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/lang/summernote-zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/plugin/databasic/summernote-ext-databasic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/plugin/databasic/summernote-ext-databasic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/plugin/hello/summernote-ext-hello.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/plugin/specialchars/summernote-ext-specialchars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/summernote-bs4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/summernote-bs4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/summernote-bs4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/summernote-lite.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/summernote-lite.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/summernote-lite.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/summernote.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/summernote.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/summernote/dist/summernote.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/upload/images/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/writeArticle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/blogProject.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/AdminDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/ArticleDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/CommentDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/DAOFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/FansDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/UserDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/impl/AdminDAOImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/impl/ArticleDAOImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/impl/CommentDAOImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/impl/FansDAOimpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/db/DbConnection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/po/AdminPo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/po/ArticlePo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/po/CommentPo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/po/FansPo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/po/UserPo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/service/ArticleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/service/DetailArticleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/service/ServiceFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/service/impl/ArticleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/service/impl/DetailArticleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/servlet/UploadServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/vo/ArticleVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/vo/DetailArticleVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/vo/UserVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dao.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/service.properties" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/detailArticle.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="104" column="36" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/ArticleDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-487">
+              <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/CommentDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/CommentDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/detailArticle.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/ArticleDAO.java" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/maven/apache-maven-3.6.1" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1125" />
+    <option name="y" value="40" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="blogProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\blogProject\src\main\webapp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\blogProject\src\main\webapp" />
+      <recent name="D:\IdeaProjects\blogProject\src\main\webapp\WEB-INF" />
+      <recent name="D:\IdeaProjects\blogProject\src\main\java\cn\com\hunau\dao\impl" />
+      <recent name="D:\IdeaProjects\blogProject\src\main\java\cn\com\hunau\dao" />
+      <recent name="D:\IdeaProjects\blogProject\src\main\java\cn\com\hunau" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.blog">
+    <configuration name="CommentDAOImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.com.hunau.dao.impl.CommentDAOImpl" />
+      <module name="blogProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.com.hunau.dao.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DbConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.com.hunau.db.DbConnection" />
+      <module name="blogProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.com.hunau.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="blog" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.82" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="blogProject:war exploded2">
+          <settings>
+            <option name="CONTEXT_PATH" value="/blogProject" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_blogProject_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55416" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="blogProject:war exploded2" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.DbConnection" />
+      <item itemvalue="Tomcat Server.blog" />
+      <item itemvalue="Application.CommentDAOImpl" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CommentDAOImpl" />
+        <item itemvalue="Application.DbConnection" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61c916fa-3ee4-470d-80c0-4429689d0b12" name="Default Changelist" comment="" />
+      <created>1564814374784</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564814374784</updated>
+      <workItem from="1564814382048" duration="4237000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4237000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Web" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Application Servers" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.684136" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" weight="0.3286119" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.25" />
+      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Application Servers" order="0" weight="0.32956153" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="4" />
+      <window_info anchor="bottom" id="Java Enterprise" order="5" />
+      <window_info anchor="bottom" id="Database Changes" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Message" order="8" />
+      <window_info anchor="bottom" id="Find" order="9" />
+      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.32956153" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="right" id="Maven" order="0" />
+      <window_info anchor="right" id="Palette" order="1" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="再次初始化" />
+    <option name="LAST_COMMIT_MESSAGE" value="再次初始化" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="860">
+          <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/po/AdminPo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/po/FansPo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/po/UserPo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/db/DbConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1280">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/po/CommentPo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/CommentDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2467">
+          <caret line="145" column="5" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+          <folding>
+            <element signature="e#493#504#0" expanded="true" />
+            <element signature="e#1715#1726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/CommentDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/UploadServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/ArticleDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-487">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/detailArticle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="104" column="36" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>blogProject:war exploded2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>blogProject</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: junit:junit:4.11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

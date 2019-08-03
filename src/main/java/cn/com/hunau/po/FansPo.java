@@ -2,9 +2,9 @@ package cn.com.hunau.po;
 
 public class FansPo {
 	
-    private int id;
-    private int f_user_id;
-    private int f_fan_id;
+    private int id;//关系id
+    private int f_user_id;//用户id
+    private int f_fan_id;//粉丝id
     
 	public int getId() {
 		return id;

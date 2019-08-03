@@ -101,4 +101,18 @@ public class DAOFactory {
         }
         return dao;
     }
+
+    public FansDAO createFansDAO() {
+        FansDAO dao = null;
+        try {
+            // 创建IFoodDAO对象（new 配置文件中foodDAO对应的实现类）
+            dao = (FansDAO) this.createObject(this.properties.getProperty("fansDAO"));
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+        return dao;
+    }
+
+
 }

@@ -99,7 +99,7 @@
     <div class="am-collapse am-topbar-collapse" id="blog-collapse">
         <ul class="am-nav am-nav-pills am-topbar-nav">
             <li><a href="index.html" style="font-size: 16px">首页</a></li>
-            <li><a href="found.html" style="font-size: 16px">发现</a></li>
+            <li><a href="foundServlet" style="font-size: 16px">发现</a></li>
             <li><a href="myconcern.html" style="font-size: 16px">我的关注</a></li>
 
         </ul>

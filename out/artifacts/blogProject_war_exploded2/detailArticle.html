@@ -30,13 +30,18 @@
     <link rel="stylesheet" href="assets/css/app.css">
     <script type="text/javascript">
         function showtextarea(data) {
-            var eles = document.getElementsByName("comment");
-            for (var i = 0; i < eles.length; i++) {
-                eles[i].style.display = "none";
-                // alert(eles[i].style.display);
+            var something = document.getElementById(data).value;
+            if (something) {
+                alert(something);
+            } else {
+                var eles = document.getElementsByName("comment");
+                for (var i = 0; i < eles.length; i++) {
+                    eles[i].style.display = "none";
+                    // alert(eles[i].style.display);
+                }
+                alert(data);
+                document.getElementById(data).style.display = "block";
             }
-            alert(data);
-            document.getElementById(data).style.display = "block";
             return false;
         }
     </script>

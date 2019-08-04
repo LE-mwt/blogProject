@@ -40,23 +40,42 @@
 
     <link rel="stylesheet" href="assets/css/amazeui.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
-    <script type="text/javascript">
-        function showtextarea(data) {
-            var eles = document.getElementsByName("commentByComment");
-            for (var i = 0; i < eles.length; i++) {
-                eles[i].style.display = "none";
-                // alert(eles[i].style.display);
-            }
-            // alert(data);
-            document.getElementById(data).style.display = "block";
-            return false;
-        }
-    </script>
     <%
         DetailArticleVo article = (DetailArticleVo) request.getAttribute("article");
         UserPo user = article.getUser();
         List<CommentPo> comments = article.getComments();
     %>
+    <script type="text/javascript">
+        function showtextarea(data) {
+            var something = document.getElementById(data).value;
+            if (something) {
+                alert(something);
+                var article_id = <%=article.getArticle_id()%>;
+                $.ajax({
+                    url: "addCommentServlet",//后台文件上传接口
+                    data: {"comment": something, "article_id": article_id, "parent_id": data},
+                    type: 'get',
+                    success: function () {
+                        alert("评论成功");
+                        document.getElementById(data).style.display = "none";
+                        location.reload();
+                    }, error: function () {
+                        alert("评论失败");
+                    }
+                });
+            } else {
+                var eles = document.getElementsByName("commentByComment");
+                for (var i = 0; i < eles.length; i++) {
+                    eles[i].style.display = "none";
+                    // alert(eles[i].style.display);
+                }
+                alert(data);
+                document.getElementById(data).style.display = "block";
+            }
+            return false;
+        }
+    </script>
+
 </head>
 
 <body id="blog">
@@ -71,7 +90,7 @@
     <div class="am-collapse am-topbar-collapse" id="blog-collapse">
         <ul class="am-nav am-nav-pills am-topbar-nav">
             <li><a href="index.html">首页</a></li>
-            <li><a href="found.html">发现</a></li>
+            <li><a href="foundServlet">发现</a></li>
             <li><a href="myconcern.html">我的关注</a></li>
 
         </ul>

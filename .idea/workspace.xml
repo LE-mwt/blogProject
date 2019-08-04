@@ -9,10 +9,16 @@
   <component name="ChangeListManager">
     <list default="true" id="61c916fa-3ee4-470d-80c0-4429689d0b12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/found.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/found.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/personcenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/personcenter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/detailArticle.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/detailArticle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/detailArticle.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/detailArticle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/detailArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/detailArticle.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/detailArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/detailArticle.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/found.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/found.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/myconcern.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/myconcern.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/otherscenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/otherscenter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/personcenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/personcenter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/writeArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/writeArticle.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,24 +32,21 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/found.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-64">
-              <caret line="130" column="109" selection-start-line="130" selection-start-column="109" selection-end-line="130" selection-end-column="109" />
-              <folding>
-                <element signature="e#9096#9103#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="140">
+              <caret line="50" column="55" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/detailArticle.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="55" column="92" selection-start-line="55" selection-start-column="92" selection-end-line="55" selection-end-column="92" />
+            <state relative-caret-position="220">
+              <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
               <folding>
                 <element signature="n#c:if#0;n#c:forEach#0;n#c:forEach#0;n#jsp:root#0;n#!!top" />
               </folding>
@@ -52,15 +55,72 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/detailArticle.html">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/regist.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/personcenter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="43" column="13" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="43" selection-end-column="13" />
+            <state relative-caret-position="124">
+              <caret line="94" column="50" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
               <folding>
-                <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#textarea#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#button#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/otherscenter.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/myconcern.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/message.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-364">
+              <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/writeArticle.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="101" column="37" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -86,7 +146,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/DAOFactory.java" />
         <option value="$PROJECT_DIR$/src/main/resources/dao.properties" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/UploadImgServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/writeArticle.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/service.properties" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/ServiceFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/ArticleDAO.java" />
@@ -100,10 +159,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/AddArticleServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/UploadServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/found.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/message.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/myconcern.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/otherscenter.html" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/po/CommentPo.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
@@ -115,10 +170,15 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/DetailArticleServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/DetailArticleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/AddCommentServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/personcenter.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/found.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/detailArticle.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/found.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/detailArticle.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/writeArticle.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/message.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/myconcern.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/otherscenter.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/personcenter.html" />
       </list>
     </option>
   </component>
@@ -148,8 +208,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,6 +298,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -440,7 +500,8 @@
       <workItem from="1564820316164" duration="117000" />
       <workItem from="1564850098916" duration="5794000" />
       <workItem from="1564897950467" duration="36158000" />
-      <workItem from="1564953997962" duration="1489000" />
+      <workItem from="1564953997962" duration="1580000" />
+      <workItem from="1564962008724" duration="800000" />
     </task>
     <task id="LOCAL-00001" summary="再次初始化">
       <created>1564819329312</created>
@@ -477,11 +538,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564954741395</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="添加了发表评论的功能 并对文章详情页进行了一些优化  &#10;初步实现了发现页面">
+      <created>1564955564439</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1564955564439</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48952000" />
+    <option name="totallyTimeSpent" value="49843000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -496,7 +564,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49627793" visible="true" weight="0.2627346" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49627793" visible="true" weight="0.2660858" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -667,13 +735,6 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/important/js/plugins/layer/laydate-v1.1/更新日志.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -685,44 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/found.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-          <folding>
-            <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/message.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/myconcern.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/otherscenter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="65" column="33" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -850,13 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/writeArticle.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="57" column="43" lean-forward="true" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/vo/DetailArticleVo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -892,16 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/AddArticleServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -941,30 +947,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/personcenter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="516" lean-forward="true" selection-start-line="516" selection-end-line="516" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/found.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64">
-          <caret line="130" column="109" selection-start-line="130" selection-start-column="109" selection-end-line="130" selection-end-column="109" />
-          <folding>
-            <element signature="e#9096#9103#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/detailArticle.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="43" column="13" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="43" selection-end-column="13" />
+        <state relative-caret-position="860">
+          <caret line="43" column="13" selection-start-line="32" selection-start-column="12" selection-end-line="43" selection-end-column="13" />
           <folding>
             <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#textarea#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -973,12 +959,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/found.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+          <folding>
+            <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/AddArticleServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/regist.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/found.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="50" column="55" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/detailArticle.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="55" column="92" selection-start-line="55" selection-start-column="92" selection-end-line="55" selection-end-column="92" />
+        <state relative-caret-position="220">
+          <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
           <folding>
             <element signature="n#c:if#0;n#c:forEach#0;n#c:forEach#0;n#jsp:root#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/writeArticle.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="101" column="37" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-364">
+          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/myconcern.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/otherscenter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/personcenter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="94" column="50" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

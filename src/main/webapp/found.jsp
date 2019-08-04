@@ -48,14 +48,14 @@
     <div class="am-collapse am-topbar-collapse" id="blog-collapse">
         <ul class="am-nav am-nav-pills am-topbar-nav">
             <li><a href="index.html">首页</a></li>
-            <li class="am-active"><a href="found.html">发现</a></li>
+            <li class="am-active"><a href="foundServlet">发现</a></li>
             <li><a href="myconcern.html">我的关注</a></li>
 
 
         </ul>
 
-        <a href="writeArticle.html" title="写文章"><img class="add" src="images/write84.png"
-                                                     style="height:30px;width:30px"/></a>
+        <a href="writeArticle.jsp" title="写文章"><img class="add" src="images/write84.png"
+                                                    style="height:30px;width:30px"/></a>
         <a href="message.html" title="我的消息"><img class="add2" src="images/mes84.png "
                                                  style="height:30px;width:30px"/></a>
 

@@ -2,13 +2,12 @@ package cn.com.hunau.dao.impl;
 
 import cn.com.hunau.dao.CommentDAO;
 import cn.com.hunau.dao.DAOFactory;
+import cn.com.hunau.dao.UserDAO;
 import cn.com.hunau.db.DbConnection;
 import cn.com.hunau.po.CommentPo;
+import cn.com.hunau.po.UserPo;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,15 +26,22 @@ public class CommentDAOImpl implements CommentDAO {
             pstmt.setInt(1, article_id);
             result = pstmt.executeQuery();
             if (result != null) {
-                CommentPo po = new CommentPo();
                 while (result.next()) {
+                    CommentPo po = new CommentPo();
                     po.setCom_id(result.getInt("com_id"));
                     po.setArticle_id(result.getInt("article_id"));
                     po.setUser_id(result.getInt("user_id"));
                     po.setCom_time(result.getTimestamp("com_time"));
                     po.setCom_text(result.getString("com_text"));
+                    List<CommentPo> byComments = findCommentsByComments(article_id, po.getCom_id());
+                    po.setComments(byComments);
+                    //得到发表该评论的用户的信息
+                    UserDAO userDAO = DAOFactory.buildDAOFactory().createUserDAO();
+                    UserPo user = userDAO.findUserioByUser_id(po.getUser_id());
+                    po.setUser(user);
                     list.add(po);
                     System.out.println(po);
+                    System.out.println(po.getUser().getUser_name());
                 }
             }
         } catch (SQLException e) {
@@ -66,8 +72,12 @@ public class CommentDAOImpl implements CommentDAO {
                     po.setCom_time(result.getTimestamp("com_time"));
                     po.setCom_text(result.getString("com_text"));
                     po.setCom_parentid(com_id);
+                    //得到发表该评论的用户的信息
+                    UserDAO userDAO = DAOFactory.buildDAOFactory().createUserDAO();
+                    UserPo user = userDAO.findUserioByUser_id(po.getUser_id());
+                    po.setUser(user);
                     list.add(po);
-                    System.out.println(po);
+                    System.out.println(po.getUser().getUser_name());
                 }
             }
         } catch (SQLException e) {
@@ -99,7 +109,8 @@ public class CommentDAOImpl implements CommentDAO {
     }
 
     @Override
-    public void addComments(CommentPo commentPo) {
+    public boolean addComments(CommentPo commentPo) {
+        boolean flag = false;
         Connection conn = null;
         PreparedStatement pstmt = null;
         conn = DbConnection.getInstance().getConnection();
@@ -113,18 +124,19 @@ public class CommentDAOImpl implements CommentDAO {
             pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, commentPo.getUser_id());
             pstmt.setInt(2, commentPo.getArticle_id());
-            pstmt.setTimestamp(3, commentPo.getCom_time());
+            pstmt.setTimestamp(3, new Timestamp(System.currentTimeMillis()));
             pstmt.setString(4, commentPo.getCom_text());
             if (commentPo.getCom_parentid() != 0) {
                 pstmt.setInt(5, commentPo.getCom_parentid());
             }
             int i = pstmt.executeUpdate();
             if (i != 0) {
-                System.out.println("插入成功");
+                flag = true;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return flag;
     }
 
     @Override
@@ -142,6 +154,15 @@ public class CommentDAOImpl implements CommentDAO {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        CommentDAO dao = DAOFactory.buildDAOFactory().createCommentDAO();
+        List<CommentPo> comments = dao.findAllCommentsByArticle(1);
+        for (CommentPo comment : comments
+        ) {
+            System.out.println(comment);
         }
     }
 }

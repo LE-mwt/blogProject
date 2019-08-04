@@ -34,6 +34,18 @@
         <servlet-name>AddArticleServlet</servlet-name>
         <servlet-class>cn.com.hunau.servlet.AddArticleServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DetailArticleServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.DetailArticleServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddCommentServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.AddCommentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FoundServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.FoundServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UploadServlet</servlet-name>
         <url-pattern>/uploadServlet</url-pattern>
@@ -45,5 +57,17 @@
     <servlet-mapping>
         <servlet-name>AddArticleServlet</servlet-name>
         <url-pattern>/addArticleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DetailArticleServlet</servlet-name>
+        <url-pattern>/detailArticleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddCommentServlet</servlet-name>
+        <url-pattern>/addCommentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FoundServlet</servlet-name>
+        <url-pattern>/foundServlet</url-pattern>
     </servlet-mapping>
 </web-app>

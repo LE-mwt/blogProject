@@ -4,6 +4,7 @@ import cn.com.hunau.service.ArticleService;
 import cn.com.hunau.service.DetailArticleService;
 import cn.com.hunau.service.ServiceFactory;
 import cn.com.hunau.vo.ArticleVo;
+import cn.com.hunau.vo.DetailArticleVo;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -28,7 +29,7 @@ public class AddArticleServlet extends HttpServlet {
 
             //获取插入的文章的内容
             DetailArticleService detailArticleService = ServiceFactory.buildServiceFactory().createDetailArticleService();
-            ArticleVo article = detailArticleService.findArticleByArticle_id(article_id);
+            DetailArticleVo article = detailArticleService.findArticleByArticle_id(article_id);
             req.setAttribute("article", article);
         } else {
             System.out.println("插入失败");

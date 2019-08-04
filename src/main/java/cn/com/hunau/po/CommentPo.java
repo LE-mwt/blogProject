@@ -1,6 +1,7 @@
 package cn.com.hunau.po;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 /**
  * 评论的Po类
@@ -18,6 +19,26 @@ public class CommentPo {
     private String com_text;
     //根据parentid判断是评论文章还是回复评论
     private int com_parentid;
+    //回复评论的评论
+    private List<CommentPo> comments;
+    //发表该评论的用户的信息
+    private UserPo user;
+
+    public UserPo getUser() {
+        return user;
+    }
+
+    public void setUser(UserPo user) {
+        this.user = user;
+    }
+
+    public List<CommentPo> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<CommentPo> comments) {
+        this.comments = comments;
+    }
 
     public int getCom_parentid() {
         return com_parentid;
@@ -69,6 +90,8 @@ public class CommentPo {
 
     @Override
     public String toString() {
-        return "com_id=" + com_id + " user_id= " + user_id + " article_id= " + article_id + " com_time= " + com_time + " com_text= " + com_text + " parentid= " + com_parentid;
+        return "com_id=" + com_id + " user_id= " + user_id + " article_id= " + article_id + " com_time= " + com_time + " com_text= " + com_text + " comments= " + comments
+//                + " user= " + user.getUser_name();
+                ;
     }
 }

@@ -16,6 +16,13 @@ public class DetailArticleVo extends ArticlePo {
     //作者的详细信息
     private UserPo user;
 
+    public DetailArticleVo() {
+    }
+
+    public DetailArticleVo(ArticlePo articlePo) {
+        this.articlePo = articlePo;
+    }
+
     public ArticlePo getArticlePo() {
         return articlePo;
     }

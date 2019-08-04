@@ -1,4 +1,8 @@
-<%@ page import="cn.com.hunau.vo.ArticleVo" %><%--
+<%@ page import="cn.com.hunau.po.CommentPo" %>
+<%@ page import="cn.com.hunau.po.UserPo" %>
+<%@ page import="cn.com.hunau.vo.DetailArticleVo" %>
+<%@ page import="java.util.List" %>
+<%--
   Created by IntelliJ IDEA.
   User: 最帅的LE
   Date: 2019/08/04 0004
@@ -6,6 +10,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -36,14 +41,21 @@
     <link rel="stylesheet" href="assets/css/amazeui.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <script type="text/javascript">
-        function showtextarea() {
-            document.getElementById("texaer").style.display = "block";
+        function showtextarea(data) {
+            var eles = document.getElementsByName("commentByComment");
+            for (var i = 0; i < eles.length; i++) {
+                eles[i].style.display = "none";
+                // alert(eles[i].style.display);
+            }
+            // alert(data);
+            document.getElementById(data).style.display = "block";
             return false;
-
         }
     </script>
     <%
-        ArticleVo article = (ArticleVo) request.getAttribute("article");
+        DetailArticleVo article = (DetailArticleVo) request.getAttribute("article");
+        UserPo user = article.getUser();
+        List<CommentPo> comments = article.getComments();
     %>
 </head>
 
@@ -113,7 +125,7 @@
                     </h1>
                     <p class="am-article-meta blog-text-center">
                         <span><a href="#" class="blog-color"><%=article.getArticle_type()%> &nbsp;</a></span>-
-                        <span><a href="#">@<%=article.getUser_name()%> &nbsp;</a></span>-
+                        <span><a href="#">@<%=user.getUser_name()%> &nbsp;</a></span>-
                         <span><a href="#"><%=article.getArticle_date().toString().substring(0, 10)%></a></span>
                     </p>
                 </div>
@@ -127,107 +139,118 @@
             <hr>
             <div class="am-g blog-author blog-article-margin">
                 <div class="am-u-sm-3 am-u-md-3 am-u-lg-2">
-                    <img src="assets/i/f15.jpg" alt="" class="blog-author-img am-circle">
+                    <img src=<%=user.getUser_picture()%> alt="" class="blog-author-img am-circle">
                 </div>
                 <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
-                    <h3><span>作者 &nbsp;: &nbsp;</span><span class="blog-color">amazeui</span></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat.</p>
+                    <h3><span>作者 &nbsp;: &nbsp;</span><span class="blog-color"><%=user.getUser_name()%></span></h3>
+                    <p><%=user.getUser_signature()%>
+                    </p>
                 </div>
             </div>
             <hr>
 
             <hr>
 
-            <form class="am-form am-g">
-                <h3 class="blog-comment" style="margin-top:20px;margin-left:5px">评论</h3>
-                <!-- 仅其他用户评论start -->
+
+            <h3 class="blog-comment" style="margin-top:20px;margin-left:5px">评论</h3>
+            <!-- 仅其他用户评论start -->
+            <c:forEach items="${article.comments}" var="comments">
                 <div class="streamline b-l b-info m-l-lg m-b padder-v">
                     <div>
                         <a class="pull-left thumb-sm avatar m-l-n-md">
-                            <img src="img/b0.jpg" class="img-circle" alt="...">
+                            <img src="${comments.user.user_picture}" class="img-circle" alt="...">
                         </a>
                         <div class="m-l-lg m-b-lg" style="margin-bottom:0px;">
                             <div class="m-b-xs">
-                                <a href="javascript:void(0)" class="h4" style="color:#148600">王玮</a>
+                                <a href="javascript:void(0)" class="h4"
+                                   style="color:#148600">${comments.user.user_name}</a>
                                 <span class="text-muted m-l-sm pull-right">
-                          3h ago
-                        </span>
+                                        ${comments.com_time}
+                                </span>
                             </div>
                             <div class="m-b">
-                                <div class="m-b">Cecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                                    laoreet. ullamcorper sodales nisi nec adipiscing elit. Morbi id neque quam. Aliquam
-                                    sollicitudin
+                                <div class="m-b">${comments.com_text}
                                 </div>
-                                <div>
-                                    <textarea id="texaer" class="" rows="1" style="display:none"></textarea>
-                                    <button type="button" onclick="showtextarea()" class="am-btn am-btn-default"
-                                            style="padding-left: 8px;padding-top: 4px;padding-right: 8px;padding-bottom: 4px;margin-top: 8px;">
+                                <div class="am-form am-g">
+                                    <textarea id="${comments.com_id}" class="" rows="1" style="display:none"
+                                              name="commentByComment"></textarea>
+                                    <button type="button" onclick="showtextarea(this.value)"
+                                            class="am-btn am-btn-default"
+                                            style="padding-left: 8px;padding-top: 4px;padding-right: 8px;padding-bottom: 4px;margin-top: 8px;"
+                                            value="${comments.com_id}">
                                         回复
                                     </button>
-
+                                    <c:if test="${comment.user.user_id==1}">
+                                        <button type="button" onclick="showtextarea()"
+                                                class="am-btn am-btn-default"
+                                                style="padding-left: 8px;padding-top: 4px;padding-right: 8px;padding-bottom: 4px;margin-top: 8px;">
+                                            删除评论
+                                        </button>
+                                    </c:if>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 仅其他用户评论end -->
 
-                <!-- 用户评论以及作者回复start -->
-                <div class="streamline b-l b-info m-l-lg m-b padder-v">
-                    <div>
-                        <a class="pull-left thumb-sm avatar m-l-n-md">
-                            <img src="img/b0.jpg" class="img-circle" alt="...">
-                        </a>
-                        <div class="m-l-lg m-b-lg" style="margin-bottom:0px;">
-                            <div class="m-b-xs">
-                                <a href class="h4" style="color:#148600">王玮</a>
-                                <span class="text-muted m-l-sm pull-right">
-                          3h ago
-                        </span>
-                            </div>
-                            <div class="m-b">
-                                <div class="m-b">Cecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                                    laoreet. ullamcorper sodales nisi nec adipiscing elit. Morbi id neque quam. Aliquam
-                                    sollicitudin
-                                </div>
-                                <div>
+                            <div>
+                                <c:forEach items="${comments.comments}" var="comment">
                                     <div class="m-l-lg m-b-lg" style="margin-bottom:0px;">
                                         <div class="m-b-xs">
-                                            <a href class="h4" style="color:#148600">任何人</a><span
+                                            <a href class="h4"
+                                               style="color:#148600">${comment.user.user_name}</a><span
                                                 style="color: #000000;font-size: 18px;">回复</span>
-                                            <span class="text-muted m-l-sm pull-right"> 3h ago</span>
+                                            <span class="text-muted m-l-sm pull-right">${comment.com_time}</span>
                                         </div>
                                         <div class="m-b">
-                                            <div class="m-b">Cecteter adipiscing elit, sed diam nonummy nibh euismod
-                                                tincidunt ut laoreet. ullamcorper sodales nisi nec adipiscing elit.
-                                                Morbi id neque quam. Aliquam sollicitudin
+                                            <div class="m-b">${comment.com_text}
                                             </div>
-
                                         </div>
+                                        <c:if test="${comment.user.user_id==1}">
+                                            <button type="button" onclick="showtextarea()"
+                                                    class="am-btn am-btn-default"
+                                                    style="padding-left: 8px;padding-top: 4px;padding-right: 8px;padding-bottom: 4px;margin-top: 8px;">
+                                                删除评论
+                                            </button>
+                                        </c:if>
                                     </div>
-
-                                </div>
+                                </c:forEach>
                             </div>
+
                         </div>
                     </div>
                 </div>
-                <!-- 用户评论以及作者回复end -->
-                <fieldset>
+            </c:forEach>
+            <%--            <fieldset>--%>
 
+            <script type="text/javascript">
+                function addComment() {
+                    var comment = document.getElementById("comment_context").value;
+                    // alert(comment);
 
-                    <div class="am-form-group">
-                        <textarea class="" rows="5" placeholder="我要评论"></textarea>
-                    </div>
+                    var article_id = <%=article.getArticle_id()%>;
+                    $.ajax({
+                        url: "addCommentServlet",//后台文件上传接口
+                        data: {"comment": comment, "article_id": article_id},
+                        type: 'get',
+                        success: function () {
+                            alert("评论成功");
+                            location.reload();
+                        }, error: function () {
+                            alert("评论失败");
+                        }
+                    });
+                }
+            </script>
+            <div class="am-form am-g">
+                <div class="am-form-group">
+                    <textarea class="" rows="5" placeholder="我要评论" id="comment_context"></textarea>
+                </div>
 
-                    <p>
-                        <button type="submit" class="am-btn am-btn-default">发表评论</button>
-                    </p>
-                </fieldset>
-            </form>
+                <p>
+                    <button type="" class="am-btn am-btn-default" onclick="addComment()" id="article_id"
+                            value="<%=article.getArticle_id()%>">发表评论
+                    </button>
+                </p>
+                <%--            </fieldset>--%>
+            </div>
 
             <hr>
         </div>
@@ -235,17 +258,6 @@
     <!-- content end -->
 </div>
 <div class="fixed"><a href="#top" title="置顶"><img src="images/84-1.png" style="height:40px;width:40px"></a></div>
-
-
-<div class="submeau" style="width: 35px; height: 60px; background-color: #e4e5e6;border-radius:10px ; z-index: 998;">
-    <div style="font-size:12px;line-height:1.3;text-align:center"><br><b>关于我们</b></div>
-</div>
-
-<div id="oa_submeau"
-     style="width: 300px; height: 450px; background-color: #0061A6;margin-top: 6.25rem;margin-left: 900px;z-index: 999;">
-    <!-- 	<img src="images/4.png" style="height:40px;width:40px"> -->
-
-</div>
 
 <style type="text/css">
 

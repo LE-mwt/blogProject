@@ -1,6 +1,6 @@
 package cn.com.hunau.service;
 
-import cn.com.hunau.vo.ArticleVo;
+import cn.com.hunau.po.CommentPo;
 import cn.com.hunau.vo.DetailArticleVo;
 
 public interface DetailArticleService {
@@ -10,16 +10,16 @@ public interface DetailArticleService {
      * @param article_id 文章id
      * @return
      */
-    ArticleVo findArticleByArticle_id(int article_id);
+    DetailArticleVo findArticleByArticle_id(int article_id);
 
 
     /**
      * 添加评论
      *
-     * @param detailArticleVo
+     * @param commentPo
      * @return
      */
-    boolean addComment(DetailArticleVo detailArticleVo);
+    boolean addComment(CommentPo commentPo);
 
     /**
      * 删除评论

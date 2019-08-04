@@ -267,35 +267,19 @@
 </div>
 
 <div class="fixed"><a href="#top" title="置顶"><img src="images/84-1.png" style="height:40px;width:40px"></a></div>
+<style type="text/css">
 
+    .fixed {
+        position: fixed;
+        top: 550px;
+        right: 40px;
+    }
 
-<div class="submeau" style="width: 35px; height: 60px; background-color: #e4e5e6;border-radius:10px ; z-index: 998;">
-    <div style="font-size:12px;line-height:1.3;text-align:center"><br><b>关于我们</b></div>
-</div>
+    .fixed img:hover {
+        transform: scale(1.3);
+    }
 
-<div id="oa_submeau"
-     style="width: 300px; height: 450px; background-color: #0061A6;margin-top: 6.25rem;margin-left: 900px;z-index: 999;">
-    <!-- 	<img src="images/4.png" style="height:40px;width:40px"> -->
-
-</div>
-
-
-<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script type="text/javascript">
-    $("#oa_submeau").hide();
-    $(".submeau").hover(function () {
-        $("#oa_submeau").show();
-    }, function () {
-        $("#oa_submeau").hide();
-    })
-    // 鼠标移动到list的div上的时候list div不会被隐藏
-    $("#oa_submeau").hover(function () {
-        $("#oa_submeau").show();
-    }, function () {
-        $("#oa_submeau").hide();
-    })
-
-</script>
+</style>
 
 
 <!--[if (gte IE 9)|!(IE)]><!-->

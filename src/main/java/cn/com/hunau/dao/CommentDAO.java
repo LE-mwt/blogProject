@@ -37,7 +37,7 @@ public interface CommentDAO {
      *
      * @param commentPo
      */
-    void addComments(CommentPo commentPo);
+    boolean addComments(CommentPo commentPo);
 
     /**
      * 根据com_id删除评论

@@ -68,7 +68,6 @@ public class UserDAOImpl implements UserDAO {
                 userpo.setUser_signature(set.getString("user_signature"));
                 userpo.setStates(set.getInt("user_states"));
             }
-
         } catch (SQLException e) {
             e.getStackTrace();
         }

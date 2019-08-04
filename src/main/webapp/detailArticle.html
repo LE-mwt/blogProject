@@ -29,10 +29,15 @@
     <link rel="stylesheet" href="assets/css/amazeui.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <script type="text/javascript">
-        function showtextarea() {
-            document.getElementById("texaer").style.display = "block";
+        function showtextarea(data) {
+            var eles = document.getElementsByName("comment");
+            for (var i = 0; i < eles.length; i++) {
+                eles[i].style.display = "none";
+                // alert(eles[i].style.display);
+            }
+            alert(data);
+            document.getElementById(data).style.display = "block";
             return false;
-
         }
     </script>
 </head>
@@ -208,9 +213,11 @@
                                     sollicitudin
                                 </div>
                                 <div>
-                                    <textarea id="texaer" class="" rows="1" style="display:none"></textarea>
-                                    <button type="button" onclick="showtextarea()" class="am-btn am-btn-default"
-                                            style="padding-left: 8px;padding-top: 4px;padding-right: 8px;padding-bottom: 4px;margin-top: 8px;">
+                                    <textarea name="comment" id="123" class="" rows="1" style="display:none"></textarea>
+                                    <button type="button" onclick="showtextarea(this.value)"
+                                            class="am-btn am-btn-default"
+                                            style="padding-left: 8px;padding-top: 4px;padding-right: 8px;padding-bottom: 4px;margin-top: 8px;"
+                                            value="123">
                                         回复
                                     </button>
 
@@ -220,7 +227,37 @@
                     </div>
                 </div>
                 <!-- 仅其他用户评论end -->
+                <div class="streamline b-l b-info m-l-lg m-b padder-v">
+                    <div>
+                        <a class="pull-left thumb-sm avatar m-l-n-md">
+                            <img src="img/b0.jpg" class="img-circle" alt="...">
+                        </a>
+                        <div class="m-l-lg m-b-lg" style="margin-bottom:0px;">
+                            <div class="m-b-xs">
+                                <a href="javascript:void(0)" class="h4" style="color:#148600">王玮</a>
+                                <span class="text-muted m-l-sm pull-right">
+                          3h ago
+                        </span>
+                            </div>
+                            <div class="m-b">
+                                <div class="m-b">Cecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                                    laoreet. ullamcorper sodales nisi nec adipiscing elit. Morbi id neque quam. Aliquam
+                                    sollicitudin
+                                </div>
+                                <div>
+                                    <textarea id="324" name="comment" class="" rows="1" style="display:none"></textarea>
+                                    <button type="button" onclick="showtextarea(this.value)"
+                                            class="am-btn am-btn-default"
+                                            style="padding-left: 8px;padding-top: 4px;padding-right: 8px;padding-bottom: 4px;margin-top: 8px;"
+                                            value="324">
+                                        回复
+                                    </button>
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- 用户评论以及作者回复start -->
                 <div class="streamline b-l b-info m-l-lg m-b padder-v">
                     <div>
@@ -280,29 +317,11 @@
     <!-- content end -->
 </div>
 <div class="fixed"><a href="#top" title="置顶"><img src="images/84-1.png" style="height:40px;width:40px"></a></div>
-
-
-<div class="submeau" style="width: 35px; height: 60px; background-color: #e4e5e6;border-radius:10px ; z-index: 998;">
-    <div style="font-size:12px;line-height:1.3;text-align:center"><br><b>关于我们</b></div>
-</div>
-
-<div id="oa_submeau"
-     style="width: 300px; height: 450px; background-color: #0061A6;margin-top: 6.25rem;margin-left: 900px;z-index: 999;">
-    <!-- 	<img src="images/4.png" style="height:40px;width:40px"> -->
-
-</div>
-
 <style type="text/css">
 
     .fixed {
         position: fixed;
-        top: 450px;
-        right: 40px;
-    }
-
-    .submeau {
-        position: fixed;
-        top: 500px;
+        top: 550px;
         right: 40px;
     }
 
@@ -311,22 +330,6 @@
     }
 
 </style>
-<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script type="text/javascript">
-    $("#oa_submeau").hide();
-    $(".submeau").hover(function () {
-        $("#oa_submeau").show();
-    }, function () {
-        $("#oa_submeau").hide();
-    })
-    // 鼠标移动到list的div上的时候list div不会被隐藏
-    $("#oa_submeau").hover(function () {
-        $("#oa_submeau").show();
-    }, function () {
-        $("#oa_submeau").hide();
-    })
-
-</script>
 
 
 <!--[if (gte IE 9)|!(IE)]><!-->

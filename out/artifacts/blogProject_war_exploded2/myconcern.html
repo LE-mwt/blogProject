@@ -20,6 +20,26 @@
     <meta name="msapplication-TileColor" content="#0e90d2">
     <link rel="stylesheet" href="assets/css/amazeui.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
+
+    <style type="text/css">
+
+        .fixed {
+            position: fixed;
+            top: 450px;
+            right: 40px;
+        }
+
+        .submeau {
+            position: fixed;
+            top: 500px;
+            right: 40px;
+        }
+
+        .fixed img:hover {
+            transform: scale(1.3);
+        }
+
+    </style>
 </head>
 
 <body id="blog">
@@ -39,11 +59,14 @@
         </ul>
 
 
-        <a href="writeArticle.html" title="写文章"><img class="add" src="images/write.png"/></a>
-        <a href="myconcern.html" title="我的消息"><img class="add2" src="images/mes.png"/></a>
+        <a href="writeArticle.jsp" title="写文章"><img class="add" src="images/write84.png"
+                                                    style="height:30px;width:30px"/></a>
+        <a href="message.html" title="我的消息"><img class="add2" src="images/mes84.png "
+                                                 style="height:30px;width:30px"/></a>
 
         <div class="dropdown" style="width:170px">
 
+            <!-------------------1.已经登录成功----------------------- -->
             <span id="hello">美少女</span>，你好！
             <div class="dropdown-content" style="z-index: 999;">
                 <a href="personcenter.html">
@@ -53,6 +76,12 @@
                     <p>退出登录</p>
                 </a>
             </div>
+
+
+            <!-------------------2.没有登录----------------------- -->
+            <!--
+              <span id="hello"><a href="login.html">登录</a></span>
+               -->
         </div>
 
         <form class="am-topbar-form am-topbar-right am-form-inline" role="search" style="margin-left: 300px;">
@@ -70,41 +99,12 @@
 <div class="bback" style="
     position: absolute;
     width: 100%;
-    background: #F6F8F9;">
+    background: #F6F8F9;"
+>
     <div class="am-g am-g-fixed blog-fixed">
         <div class="am-u-md-8 am-u-sm-12" style="
     padding-left: 18px;
     left: 200px">
-
-            <article class="am-g blog-entry-article">
-                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
-                    <img src="assets/i/f10.jpg" alt="" class="am-u-sm-12">
-                </div>
-                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
-                    <span><a href="" class="blog-color">article &nbsp;</a></span>
-                    <span> @amazeUI &nbsp;</span>
-                    <span>2015/10/9</span>
-                    <h1><a href="">总在思考一句积极的话</a></h1>
-                    <p>那时候刚好下着雨，柏油路面湿冷冷的，还闪烁着青、黄、红颜色的灯火。
-                    </p>
-                    <p><a href="" class="blog-continue">continue reading</a></p>
-                </div>
-            </article>
-
-            <article class="am-g blog-entry-article">
-                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
-                    <img src="assets/i/f6.jpg" alt="" class="am-u-sm-12">
-                </div>
-                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
-                    <span><a href="" class="blog-color">article&nbsp;</a></span>
-                    <span>@amazeUI &nbsp;</span>
-                    <span>2015/10/9</span>
-                    <h1><a href="">选择的正确性</a></h1>
-                    <p>你可以选择在原处不停地跟周遭不解的人解释你为何这么做，让他们理解你，你可以选择什么都不讲，自顾自往前走。
-                    </p>
-                    <p><a href="" class="blog-continue">continue</a></p>
-                </div>
-            </article>
 
             <article class="am-g blog-entry-article">
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
@@ -114,7 +114,7 @@
                     <span><a href="" class="blog-color">article&nbsp;</a></span>
                     <span>@amazeUI</span>
                     <span>2015/10/9</span>
-                    <h1><a href="">开心时拥抱全世界</a></h1>
+                    <h1><a href="detailArticle.html">开心时拥抱全世界</a></h1>
                     <p>那时候刚好下着雨，柏油路面湿冷冷的，还闪烁着青、黄、红颜色的灯火。我们就在骑楼下躲雨，看绿色的邮筒孤独地站在街的对面。
                     </p>
                     <p><a href="" class="blog-continue">continue</a></p>
@@ -129,8 +129,39 @@
                     <span><a href="" class="blog-color">article&nbsp;</a></span>
                     <span>@amazeUI</span>
                     <span>2015/10/9</span>
-                    <h1><a href="">总以为机会无限</a></h1>
+                    <h1><a href="detailArticle.html">总以为机会无限</a></h1>
                     <p>那时候刚好下着雨，柏油路面湿冷冷的，还闪烁着青、黄、红颜色的灯火。我们就在骑楼下躲雨，看绿色的邮筒孤独地站在街的对面。
+                    </p>
+                    <p><a href="" class="blog-continue">continue</a></p>
+                </div>
+            </article>
+
+
+            <article class="am-g blog-entry-article">
+                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
+                    <img src="assets/i/f10.jpg" alt="" class="am-u-sm-12">
+                </div>
+                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+                    <span><a href="" class="blog-color">article &nbsp;</a></span>
+                    <span> @amazeUI &nbsp;</span>
+                    <span>2015/10/9</span>
+                    <h1><a href="detailArticle.html">总在思考一句积极的话</a></h1>
+                    <p>那时候刚好下着雨，柏油路面湿冷冷的，还闪烁着青、黄、红颜色的灯火。
+                    </p>
+                    <p><a href="" class="blog-continue">continue reading</a></p>
+                </div>
+            </article>
+
+            <article class="am-g blog-entry-article">
+                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
+                    <img src="assets/i/f6.jpg" alt="" class="am-u-sm-12">
+                </div>
+                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+                    <span><a href="" class="blog-color">article&nbsp;</a></span>
+                    <span>@amazeUI &nbsp;</span>
+                    <span>2015/10/9</span>
+                    <h1><a href="detailArticle.html">选择的正确性</a></h1>
+                    <p>你可以选择在原处不停地跟周遭不解的人解释你为何这么做，让他们理解你，你可以选择什么都不讲，自顾自往前走。
                     </p>
                     <p><a href="" class="blog-continue">continue</a></p>
                 </div>
@@ -144,7 +175,7 @@
                     <span><a href="" class="blog-color">article&nbsp;</a></span>
                     <span> @amazeUI &nbsp;</span>
                     <span>2015/10/9</span>
-                    <h1><a href="">GIVE ME SOME BIG TEXT AND FONT </a></h1>
+                    <h1><a href="detailArticle.html">GIVE ME SOME BIG TEXT AND FONT </a></h1>
                     <p>那时候刚好下着雨，柏油路面湿冷冷的，还闪烁着青、黄、红颜色的灯火。我们就在骑楼下躲雨，看绿色的邮筒孤独地站在街的对面。
                     </p>
                     <p><a href="" class="blog-continue">continue reading</a></p>
@@ -159,7 +190,7 @@
                     <span><a href="" class="blog-color">article&nbsp;</a></span>
                     <span> @amazeUI &nbsp;</span>
                     <span>2015/10/9</span>
-                    <h1><a href="">taha cool man i do believe</a></h1>
+                    <h1><a href="detailArticle.html">taha cool man i do believe</a></h1>
                     <p>那时候刚好下着雨，柏油路面湿冷冷的，还闪烁着青、黄、红颜色的灯火。我们就在骑楼下躲雨，看绿色的邮筒孤独地站在街的对面。
                     </p>
                     <p><a href="" class="blog-continue">continue reading</a></p>
@@ -174,7 +205,7 @@
                     <span><a href="" class="blog-color">article&nbsp;</a></span>
                     <span> @amazeUI &nbsp;</span>
                     <span>2015/10/9</span>
-                    <h1><a href="">taha cool man i do believe</a></h1>
+                    <h1><a href="detailArticle.html">taha cool man i do believe</a></h1>
                     <p>那时候刚好下着雨，柏油路面湿冷冷的，还闪烁着青、黄、红颜色的灯火。我们就在骑楼下躲雨，看绿色的邮筒孤独地站在街的对面。
                     </p>
                     <p><a href="" class="blog-continue">continue reading</a></p>
@@ -189,6 +220,38 @@
     </div>
 </div>
 <!-- content end -->
+
+
+<div class="fixed"><a href="#top" title="置顶"><img src="images/84-1.png" style="height:40px;width:40px"></a></div>
+
+
+<div class="submeau" style="width: 35px; height: 60px; background-color: #e4e5e6;border-radius:10px ; z-index: 998;">
+    <div style="font-size:12px;line-height:1.3;text-align:center"><br><b>关于我们</b></div>
+</div>
+
+<div id="oa_submeau"
+     style="width: 300px; height: 450px; background-color: #0061A6;margin-top: 6.25rem;margin-left: 900px;z-index: 999;">
+    <!-- 	<img src="images/4.png" style="height:40px;width:40px"> -->
+
+</div>
+
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+    $("#oa_submeau").hide();
+    $(".submeau").hover(function () {
+        $("#oa_submeau").show();
+    }, function () {
+        $("#oa_submeau").hide();
+    })
+    // 鼠标移动到list的div上的时候list div不会被隐藏
+    $("#oa_submeau").hover(function () {
+        $("#oa_submeau").show();
+    }, function () {
+        $("#oa_submeau").hide();
+    })
+
+</script>
 
 
 <!--[if (gte IE 9)|!(IE)]><!-->

@@ -3,12 +3,47 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
     <display-name>Archetype Created Web Application</display-name>
+
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>cn.com.hunau.filter.EncodingFilter</filter-class>
+        <init-param>
+            <param-name>sourceEncoding</param-name>
+            <param-value>iso-8859-1</param-value>
+        </init-param>
+        <init-param>
+            <param-name>targetEncoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
     <servlet>
         <servlet-name>UploadServlet</servlet-name>
         <servlet-class>cn.com.hunau.servlet.UploadServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UploadImgServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.UploadImgServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddArticleServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.AddArticleServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UploadServlet</servlet-name>
         <url-pattern>/uploadServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadImgServlet</servlet-name>
+        <url-pattern>/uploadImgServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddArticleServlet</servlet-name>
+        <url-pattern>/addArticleServlet</url-pattern>
     </servlet-mapping>
 </web-app>

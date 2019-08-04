@@ -1,5 +1,6 @@
 package cn.com.hunau.servlet;
 
+import cn.com.hunau.vo.ArticleVo;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
@@ -16,9 +17,14 @@ import java.io.UnsupportedEncodingException;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * 从混合表单中得到数据封装到ArticleVo中 并传给添加文章的Servlet
+ */
 public class UploadServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //构造一个文章vo
+        ArticleVo articleVo = new ArticleVo();
         // 判断是不是上传的form
         boolean bool = ServletFileUpload.isMultipartContent(req);
         if (bool) {
@@ -35,7 +41,17 @@ public class UploadServlet extends HttpServlet {
                     // 判断是否是普通的表单field
                     if (item.isFormField()) {
                         // 普通的表单数据
-                        System.out.println(item.getFieldName() + "-->>" + convertToOK(item.getString()));
+                        if (item.getFieldName().equals("article_title")) {
+                            articleVo.setArticle_title(convertToOK(item.getString()));
+                        } else if (item.getFieldName().equals("article_type")) {
+                            articleVo.setArticle_type(convertToOK(item.getString()));
+                        } else if (item.getFieldName().equals("article_context")) {
+                            articleVo.setArticle_context(convertToOK(item.getString()));
+                        } else if (!item.getFieldName().equals("article_private")) {
+                            articleVo.setArticle_private(0);
+                        } else if (item.getFieldName().equals("article_private")) {
+                            articleVo.setArticle_private(1);
+                        }
                     } else {
                         // 文件
                         // 获取文件名
@@ -53,23 +69,28 @@ public class UploadServlet extends HttpServlet {
 
                             File file = new File(realPath + "/" + fileName);
                             item.write(file);
-                            System.out.println(item.getFieldName() + ">" + file.getName() + "***********" + file.getAbsolutePath());
+//                            System.out.println(item.getFieldName() + ">" + file.getName() + "***********" + file.getAbsolutePath());
                             resp.setContentType("charset=utf-8");
                             PrintWriter out = resp.getWriter();
                             //得到图片的url
                             String imgUrl = "upload/images/" + fileName;
-                            out.print(imgUrl);
-                            out.flush();
-                            out.close();
+                            articleVo.setArticle_cover(imgUrl);
+//                            out.print(imgUrl);
+//                            out.flush();
+//                            out.close();
                         }
                     }
                 }
+                articleVo.setUser_id(2);
+                System.out.println(articleVo);
+                req.setAttribute("articleVo", articleVo);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         } else {
             System.out.println("不是上传文件的form");
         }
+        req.getRequestDispatcher("/addArticleServlet?math=" + Math.random()).forward(req, resp);
     }
 
     private String convertToOK(String value) {

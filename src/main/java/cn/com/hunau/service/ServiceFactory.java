@@ -87,4 +87,9 @@ public class ServiceFactory {
         }
         return service;
     }
+
+    public static void main(String[] args) {
+        ArticleService service = ServiceFactory.buildServiceFactory().createArticleService();
+        System.out.println(service);
+    }
 }

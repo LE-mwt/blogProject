@@ -3,8 +3,6 @@ package cn.com.hunau.service;
 import cn.com.hunau.vo.ArticleVo;
 import cn.com.hunau.vo.DetailArticleVo;
 
-import java.util.List;
-
 public interface DetailArticleService {
     /**
      * 找到指定文章的所有信息
@@ -12,7 +10,7 @@ public interface DetailArticleService {
      * @param article_id 文章id
      * @return
      */
-    List<ArticleVo> findArticleByArticle_id(int article_id);
+    ArticleVo findArticleByArticle_id(int article_id);
 
 
     /**

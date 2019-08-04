@@ -94,4 +94,10 @@ public class ArticlePo {
         this.user_id = user_id;
     }
 
+    @Override
+    public String toString() {
+        return " article_id= " + article_id + " article_title= " + article_title + " article_cover= " + article_cover +
+                " article_type= " + article_type + " article_context= " + article_context + "article_private= " + article_private +
+                " user_id= " + user_id;
+    }
 }

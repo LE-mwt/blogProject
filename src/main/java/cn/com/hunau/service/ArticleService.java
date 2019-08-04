@@ -46,7 +46,7 @@ public interface ArticleService {
      *
      * @param articleVo 文章vo
      */
-    boolean addArticleByUser_id(ArticleVo articleVo);
+    int addArticleByUser_id(ArticleVo articleVo);
 
     /**
      * 删除文章

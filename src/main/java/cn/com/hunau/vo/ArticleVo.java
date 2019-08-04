@@ -12,19 +12,22 @@ public class ArticleVo extends ArticlePo {
     //作者的用户名
     private String user_name;
 
-    public String getUser_name() {
-        return user_name;
+    public ArticleVo() {
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public ArticleVo(ArticlePo articlePo) {
+        this.articlePo = articlePo;
     }
 
     public ArticlePo getArticlePo() {
         return articlePo;
     }
 
-    public void setArticlePo(ArticlePo articlePo) {
-        this.articlePo = articlePo;
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 }

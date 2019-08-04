@@ -50,7 +50,7 @@ public interface ArticleDAO {
      * @param article 通过文章Po传值
      * @return
      */
-    public boolean addArticle(ArticlePo article);
+    public int addArticle(ArticlePo article);
 
     /**
      * 查询浏览量排名为前top文章

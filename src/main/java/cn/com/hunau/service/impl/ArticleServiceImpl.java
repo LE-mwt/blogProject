@@ -1,5 +1,7 @@
 package cn.com.hunau.service.impl;
 
+import cn.com.hunau.dao.ArticleDAO;
+import cn.com.hunau.dao.DAOFactory;
 import cn.com.hunau.service.ArticleService;
 import cn.com.hunau.vo.ArticleVo;
 import cn.com.hunau.vo.UserVo;
@@ -29,8 +31,10 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public boolean addArticleByUser_id(ArticleVo articleVo) {
-        return false;
+    public int addArticleByUser_id(ArticleVo articleVo) {
+        ArticleDAO dao = DAOFactory.buildDAOFactory().createArticleDAO();
+        int insertId = dao.addArticle(articleVo);
+        return insertId;
     }
 
     @Override

@@ -87,25 +87,53 @@ public class CommentDAOImpl implements CommentDAO {
     }
 
     @Override
-    public boolean findCommentsByUser(int user_id, int com_id) {
-        boolean flag = false;
+    public List<CommentPo> findCommentsByUser(int user_id) {
+        List<CommentPo> list = new ArrayList<CommentPo>();
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet result = null;
         conn = DbConnection.getInstance().getConnection();
-        String sql = "select * from comments where user_id = ? and com_id = ?";
+        String sql = "select * from comments where user_id = ?";
         try {
             pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, user_id);
-            pstmt.setInt(2, com_id);
             result = pstmt.executeQuery();
             if (result != null) {
-                flag = true;
+                while (result.next()) {
+                    CommentPo commentPo = new CommentPo();
+                    System.out.println("---------------" + result.getInt("article_id"));
+                    commentPo.setArticle_id(result.getInt("article_id"));
+                    list.add(commentPo);
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return flag;
+        return list;
+    }
+
+    @Override
+    public Timestamp findCommentsByTime(int article_id) {
+        Timestamp time = new Timestamp(System.currentTimeMillis());
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet result = null;
+        conn = DbConnection.getInstance().getConnection();
+        String sql = "select com_time from comments where article_id = ?";
+        try {
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, article_id);
+            result = pstmt.executeQuery();
+            if (result != null) {
+                CommentPo commentPo = new CommentPo();
+                while (result.next()) {
+                    time = result.getTimestamp("com_time");
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return time;
     }
 
     @Override
@@ -140,7 +168,8 @@ public class CommentDAOImpl implements CommentDAO {
     }
 
     @Override
-    public void deleteComment(int com_id) {
+    public boolean deleteComment(int com_id) {
+        boolean flag = false;
         Connection conn = null;
         PreparedStatement pstmt = null;
         conn = DbConnection.getInstance().getConnection();
@@ -150,19 +179,29 @@ public class CommentDAOImpl implements CommentDAO {
             pstmt.setInt(1, com_id);
             int i = pstmt.executeUpdate();
             if (i != 0) {
-                System.out.println("删除成功");
+//                System.out.println("删除成功");
+                flag = true;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return flag;
     }
 
     public static void main(String[] args) {
         CommentDAO dao = DAOFactory.buildDAOFactory().createCommentDAO();
-        List<CommentPo> comments = dao.findAllCommentsByArticle(1);
-        for (CommentPo comment : comments
+//        List<CommentPo> comments = dao.findAllCommentsByArticle(1);
+//        for (CommentPo comment : comments
+//        ) {
+//            System.out.println(comment);
+//        }
+//        List<CommentPo> commentsByUser = dao.findCommentsByUser(1);
+        List<CommentPo> commentsByUser = dao.findCommentsByUser(1);
+        for (CommentPo po : commentsByUser
         ) {
-            System.out.println(comment);
+            System.out.println(po.getArticle_id());
+            Timestamp time = dao.findCommentsByTime(po.getArticle_id());
+            System.out.println(time);
         }
     }
 }

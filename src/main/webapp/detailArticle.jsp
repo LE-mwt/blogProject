@@ -74,6 +74,21 @@
             }
             return false;
         }
+
+        function deleteComment(com_id) {
+            alert(com_id);
+            $.ajax({
+                url: "deleteCommentServlet",//后台文件上传接口
+                data: {"com_id": com_id},
+                type: 'get',
+                success: function () {
+                    alert("评论删除成功");
+                    location.reload();
+                }, error: function () {
+                    alert("评论删除失败");
+                }
+            });
+        }
     </script>
 
 </head>
@@ -183,6 +198,15 @@
                             <div class="m-b-xs">
                                 <a href="javascript:void(0)" class="h4"
                                    style="color:#148600">${comments.user.user_name}</a>
+                                <c:if test="${comments.user.user_id==article.user.user_id}">
+                                    (作者)
+                                </c:if>
+                                    <%--                                <script type="text/javascript">--%>
+                                    <%--                                    alert(${comments.user.user_id});--%>
+                                    <%--                                    alert(<%=user.getUser_id()%>);--%>
+                                    <%--                                    alert(${article.user.user_id});--%>
+                                    <%--                                    alert(${comments.user.user_id==article.user.user_id});--%>
+                                    <%--                                </script>--%>
                                 <span class="text-muted m-l-sm pull-right">
                                         ${comments.com_time}
                                 </span>
@@ -199,10 +223,11 @@
                                             value="${comments.com_id}">
                                         回复
                                     </button>
-                                    <c:if test="${comment.user.user_id==1}">
-                                        <button type="button" onclick="showtextarea()"
+                                    <c:if test="${comments.user.user_id==1}">
+                                        <button type="button" onclick="deleteComment(this.value)"
                                                 class="am-btn am-btn-default"
-                                                style="padding-left: 8px;padding-top: 4px;padding-right: 8px;padding-bottom: 4px;margin-top: 8px;">
+                                                style="padding-left: 8px;padding-top: 4px;padding-right: 8px;padding-bottom: 4px;margin-top: 8px;"
+                                                value="${comments.com_id}">
                                             删除评论
                                         </button>
                                     </c:if>
@@ -214,8 +239,12 @@
                                     <div class="m-l-lg m-b-lg" style="margin-bottom:0px;">
                                         <div class="m-b-xs">
                                             <a href class="h4"
-                                               style="color:#148600">${comment.user.user_name}</a><span
-                                                style="color: #000000;font-size: 18px;">回复</span>
+                                               style="color:#148600">${comment.user.user_name}</a>
+                                            <c:if test="${comment.user.user_id==article.user.user_id}">
+                                                (作者)
+                                            </c:if>
+                                            <span
+                                                    style="color: #000000;font-size: 18px;">回复</span>
                                             <span class="text-muted m-l-sm pull-right">${comment.com_time}</span>
                                         </div>
                                         <div class="m-b">
@@ -223,9 +252,10 @@
                                             </div>
                                         </div>
                                         <c:if test="${comment.user.user_id==1}">
-                                            <button type="button" onclick="showtextarea()"
+                                            <button type="button" onclick="deleteComment(this.value)"
                                                     class="am-btn am-btn-default"
-                                                    style="padding-left: 8px;padding-top: 4px;padding-right: 8px;padding-bottom: 4px;margin-top: 8px;">
+                                                    style="padding-left: 8px;padding-top: 4px;padding-right: 8px;padding-bottom: 4px;margin-top: 8px;"
+                                                    value="${comment.com_id}">
                                                 删除评论
                                             </button>
                                         </c:if>

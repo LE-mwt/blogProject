@@ -4,21 +4,58 @@
     <artifacts-to-build>
       <artifact name="blogProject:war exploded2" />
       <artifact name="blogProject:war exploded2" />
+      <artifact name="blogProject:war exploded2" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61c916fa-3ee4-470d-80c0-4429689d0b12" name="Default Changelist" comment="">
+    <list default="true" id="61c916fa-3ee4-470d-80c0-4429689d0b12" name="Default Changelist" comment="基本实现了发现页面">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/DeleteCommentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/vo/MessageVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/detailArticle.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/detailArticle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/CommentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/CommentDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/impl/ArticleDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/impl/ArticleDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/impl/CommentDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/impl/CommentDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/impl/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/dao/impl/UserDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/service/DetailArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/service/DetailArticleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/service/impl/ArticleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/service/impl/DetailArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/service/impl/DetailArticleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/servlet/FoundServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/classes/cn/com/hunau/servlet/FoundServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/amazeui.ie8polyfill.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/amazeui.ie8polyfill.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/amazeui.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/amazeui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/assets/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/detailArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/detailArticle.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/found.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/found.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/myconcern.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/myconcern.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/otherscenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/otherscenter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/personcenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/personcenter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/writeArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blogProject_war_exploded2/writeArticle.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/CommentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/CommentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/ArticleDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/ArticleDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/CommentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/CommentDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/DetailArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/DetailArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/DetailArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/DetailArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/FoundServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/FoundServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/amazeui.ie8polyfill.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amazeui.ie8polyfill.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/amazeui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/amazeui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/detailArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/detailArticle.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/found.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/found.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/message.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/myconcern.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/myconcern.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/otherscenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/otherscenter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/personcenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/personcenter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/writeArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/writeArticle.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/CommentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/CommentDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/impl/ArticleDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/impl/ArticleDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/impl/CommentDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/impl/CommentDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/impl/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/dao/impl/UserDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/hunau/service/DetailArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/service/DetailArticleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/hunau/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/service/impl/ArticleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/hunau/service/impl/DetailArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/service/impl/DetailArticleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/hunau/servlet/FoundServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/hunau/servlet/FoundServlet.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,93 +71,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/found.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/vo/MessageVo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="50" column="55" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="55" />
+            <state relative-caret-position="40">
+              <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/detailArticle.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
-              <folding>
-                <element signature="n#c:if#0;n#c:forEach#0;n#c:forEach#0;n#jsp:root#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/regist.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/personcenter.html">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/found.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="94" column="50" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
-              <folding>
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/otherscenter.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/myconcern.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/message.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-364">
-              <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/writeArticle.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="101" column="37" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
+            <state relative-caret-position="257">
+              <caret line="135" column="17" selection-start-line="135" selection-start-column="17" selection-end-line="135" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -131,8 +94,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>doc-vld-email-2-1</find>
+      <find>am-input-group</find>
+      <find>am-radius</find>
+      <find>11</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -150,7 +122,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/ServiceFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/ArticleDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/ArticleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/ArticleDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/writeArticle.html" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/po/ArticlePo.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/writeArticle_new.jsp" />
@@ -159,26 +130,32 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/AddArticleServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/UploadServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/found.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/po/CommentPo.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/vo/ArticleVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/ArticleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/CommentDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/CommentDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/DetailArticleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/DetailArticleServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/DetailArticleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/AddCommentServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/detailArticle.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/found.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/detailArticle.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/writeArticle.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/message.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/myconcern.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/otherscenter.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/personcenter.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/DetailArticleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/DeleteCommentServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/ArticleDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/CommentDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/CommentDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/UserDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/DetailArticleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/detailArticle.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/assets/js/amazeui.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/assets/js/amazeui.ie8polyfill.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/ArticleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/found.jsp" />
       </list>
     </option>
   </component>
@@ -208,6 +185,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,7 +226,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="hunau" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hunau" type="462c0819:PsiDirectoryNode" />
+              <item name="po" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blogProject" type="b2602c69:ProjectViewProjectNode" />
@@ -276,15 +263,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="hunau" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hunau" type="462c0819:PsiDirectoryNode" />
               <item name="vo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -298,7 +276,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -306,7 +283,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -321,15 +298,15 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IdeaProjects\blogProject\src\main\java\cn\com\hunau\servlet" />
-      <recent name="D:\IdeaProjects\blogProject\src\main\java\cn\com\hunau\vo" />
-      <recent name="D:\IdeaProjects\blogProject\src\main\webapp" />
-      <recent name="D:\IdeaProjects\blogProject\src\main\java\cn\com\hunau\filter" />
-      <recent name="D:\IdeaProjects\blogProject\src\main\java\cn\com\hunau\po" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IdeaProjects\blogProject\src\main\webapp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\blogProject\src\main\webapp" />
+      <recent name="D:\IdeaProjects\blogProject\src\main\java\cn\com\hunau\servlet" />
+      <recent name="D:\IdeaProjects\blogProject\src\main\java\cn\com\hunau\vo" />
+      <recent name="D:\IdeaProjects\blogProject\src\main\java\cn\com\hunau\filter" />
+      <recent name="D:\IdeaProjects\blogProject\src\main\java\cn\com\hunau\po" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -467,6 +444,7 @@
         <option name="BuildArtifacts" enabled="true">
           <artifact name="blogProject:war exploded2" />
           <artifact name="blogProject:war exploded2" />
+          <artifact name="blogProject:war exploded2" />
         </option>
       </method>
     </configuration>
@@ -479,8 +457,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CommentDAOImpl" />
         <item itemvalue="Application.DetailArticleServiceImpl" />
+        <item itemvalue="Application.CommentDAOImpl" />
         <item itemvalue="Application.ServiceFactory" />
         <item itemvalue="Application.DbConnection" />
       </list>
@@ -501,7 +479,8 @@
       <workItem from="1564850098916" duration="5794000" />
       <workItem from="1564897950467" duration="36158000" />
       <workItem from="1564953997962" duration="1580000" />
-      <workItem from="1564962008724" duration="800000" />
+      <workItem from="1564962008724" duration="3802000" />
+      <workItem from="1564972838421" duration="9121000" />
     </task>
     <task id="LOCAL-00001" summary="再次初始化">
       <created>1564819329312</created>
@@ -545,11 +524,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564955564439</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="添加了发表评论的功能 并对文章详情页进行了一些优化  &#10;初步实现了发现页面">
+      <created>1564963053952</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1564963053952</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49843000" />
+    <option name="totallyTimeSpent" value="61966000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -564,14 +550,14 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49627793" visible="true" weight="0.2660858" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49379653" visible="true" weight="0.269437" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.5037221" side_tool="true" weight="0.25938338" />
+      <window_info id="Web" order="7" sideWeight="0.5062035" side_tool="true" weight="0.2660858" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.42917848" />
@@ -681,233 +667,14 @@
     <MESSAGE value="网页优化以及写文章功能完成" />
     <MESSAGE value="网页优化以及写文章功能完成（文章发布成功后自动跳转至该文章的详情页）" />
     <MESSAGE value="添加了发表评论的功能 并对文章详情页进行了一些优化  &#10;初步实现了发现页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了发表评论的功能 并对文章详情页进行了一些优化  &#10;初步实现了发现页面" />
+    <MESSAGE value="基本实现了发现页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本实现了发现页面" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/DAOFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="108" column="76" selection-start-line="108" selection-start-column="76" selection-end-line="108" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dao.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/db.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/service.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="71" selection-start-line="2" selection-start-column="71" selection-end-line="2" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/service/ServiceFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/UploadImgServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="61" column="36" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/filter/EncodingFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="26" column="63" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/writeArticle.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/84-1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/important/js/plugins/layer/laydate-v1.1/更新日志.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/vo/UserVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/po/CommentPo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#603#604#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/po/UserPo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/ArticleDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-284">
-          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/QQ/978577813/FileRecv/ArticleVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/QQ/978577813/FileRecv/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="15" column="75" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="75" />
-          <folding>
-            <element signature="method#findArticleByTime#0;class#ArticleServiceImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/po/ArticlePo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/ArticleDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="171" column="39" selection-start-line="171" selection-start-column="39" selection-end-line="171" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/vo/ArticleVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/QQ/978577813/FileRecv/ArticleServiceImpl(1).java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
-          <folding>
-            <element signature="method#findArticleByTime#0;class#ArticleServiceImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="50" column="27" lean-forward="true" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/FoundServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/AdminDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/vo/DetailArticleVo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="12" column="31" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/CommentDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="127" column="56" lean-forward="true" selection-start-line="127" selection-start-column="56" selection-end-line="127" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/CommentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/DetailArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/service/ArticleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -923,49 +690,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/service/DetailArticleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/AddCommentServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/DetailArticleServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="20" column="74" lean-forward="true" selection-start-line="20" selection-start-column="74" selection-end-line="20" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/detailArticle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="43" column="13" selection-start-line="32" selection-start-column="12" selection-end-line="43" selection-end-column="13" />
-          <folding>
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#button#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/found.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-          <folding>
-            <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -979,44 +707,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/regist.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/found.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="50" column="55" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/detailArticle.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
-          <folding>
-            <element signature="n#c:if#0;n#c:forEach#0;n#c:forEach#0;n#jsp:root#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/writeArticle.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="101" column="37" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-364">
-          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1041,13 +735,338 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/regist.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/personcenter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
+        <state relative-caret-position="1444">
           <caret line="94" column="50" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
           <folding>
             <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/DeleteCommentServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/ArticleDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-64">
+          <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/service/ArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/CommentDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1581">
+          <caret line="102" column="20" lean-forward="true" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="58" />
+          <folding>
+            <element signature="e#3749#3760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/AdminDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/ArticleDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/detailArticle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1827">
+          <caret line="23" column="76" lean-forward="true" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
+          <folding>
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#button#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/impl/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4360">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/DetailArticleServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/detailArticle.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="242" column="65" selection-start-line="242" selection-start-column="65" selection-end-line="242" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/amazeui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="7042" column="10" selection-start-line="7042" selection-start-column="1" selection-end-line="7042" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/handlebars.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="26" column="11254" selection-start-line="26" selection-start-column="11252" selection-end-line="26" selection-end-column="11254" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/img.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/jquery.waterfall.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/pinto.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/theme.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/amazeui.widgets.helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#!!top" expanded="true" />
+            <element signature="e#2436#2443#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/amazeui.ie8polyfill.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="1492" column="65" selection-start-line="1492" selection-start-column="63" selection-end-line="1492" selection-end-column="65" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/echarts.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="11" column="17579" selection-start-line="11" selection-start-column="17577" selection-end-line="11" selection-end-column="17579" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/amazeui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2852">
+          <caret line="12908" column="22" selection-start-line="12908" selection-start-column="20" selection-end-line="12908" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="94" column="47" selection-start-line="94" selection-start-column="47" selection-end-line="94" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/QQ/978577813/FileRecv/ArticleServiceImpl(2).java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="54" selection-end-column="5" />
+          <folding>
+            <element signature="method#findArticleByTime#0;class#ArticleServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/found.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+          <folding>
+            <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/servlet/FoundServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="62" column="53" lean-forward="true" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/po/AdminPo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/po/ArticlePo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+          <folding>
+            <element signature="e#1411#1412#0" expanded="true" />
+            <element signature="e#1449#1450#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/FansDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="288" column="36" lean-forward="true" selection-start-line="288" selection-start-column="36" selection-end-line="288" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/service/DetailArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/DetailArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1040">
+          <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/po/CommentPo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/dao/CommentDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/QQ/978577813/FileRecv/ArticleServiceImpl(3).java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <element signature="method#findArticleByTime#0;class#ArticleServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/service/impl/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#findArticleByTime#0;class#ArticleServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/com/hunau/vo/MessageVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/found.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="135" column="17" selection-start-line="135" selection-start-column="17" selection-end-line="135" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1109,7 +1128,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

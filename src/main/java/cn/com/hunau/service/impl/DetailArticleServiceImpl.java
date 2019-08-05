@@ -51,13 +51,15 @@ public class DetailArticleServiceImpl implements DetailArticleService {
     }
 
     @Override
-    public boolean deleteComment(DetailArticleVo detailArticleVo) {
-        return false;
+    public boolean deleteComment(int com_id) {
+        CommentDAO commentDAO = DAOFactory.buildDAOFactory().createCommentDAO();
+        boolean flag = commentDAO.deleteComment(com_id);
+        return flag;
     }
 
     public static void main(String[] args) {
         DetailArticleService service = ServiceFactory.buildServiceFactory().createDetailArticleService();
         DetailArticleVo article = service.findArticleByArticle_id(1);
-        System.out.println(article.getComments());
+        System.out.println(article.getUser().getUser_id());
     }
 }

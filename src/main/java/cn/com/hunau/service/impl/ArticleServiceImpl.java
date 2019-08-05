@@ -33,7 +33,14 @@ public class ArticleServiceImpl implements ArticleService {
         // poList转换成voList
         for (ArticlePo po : articlePoList) {
             vo = new ArticleVo();
-            vo.setArticle_context(po.getArticle_context());
+            String context = "";
+            if (po.getArticle_context().length() > 50) {
+                context = po.getArticle_context().substring(0, 50) + "...";
+            } else {
+                context = po.getArticle_context();
+            }
+            System.out.println(context);
+            vo.setArticle_context(context);
             vo.setArticle_cover(po.getArticle_cover());
             vo.setArticle_date(po.getArticle_date());
             vo.setArticle_id(po.getArticle_id());
@@ -41,10 +48,11 @@ public class ArticleServiceImpl implements ArticleService {
             vo.setArticle_title(po.getArticle_title());
             vo.setArticle_type(po.getArticle_type());
             vo.setArticle_viewcount(po.getArticle_viewcount());
-            vo.setUser_id(po.getArticle_viewcount());
+            vo.setUser_id(po.getUser_id());
 
             int userId = vo.getUser_id();
             String userName = this.userDAO.findUserioByUser_id(userId).getUser_name();
+            System.out.println(userName);
             vo.setUser_name(userName);
             articleList.add(vo);
         }

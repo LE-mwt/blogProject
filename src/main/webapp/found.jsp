@@ -27,12 +27,14 @@
     <script type="text/javascript">
         function page_nav(frm, num) {
             frm.pageIndex.value = num;
-            if (num > 0) {
-                alert("第" + num + "页")
-            } else {
-                alert("当前已是第1页")
-            }
+            // if (num > 0) {
+            //     alert("第" + num + "页")
+            // } else {
+            //     alert("当前已是第1页")
+            // }
             frm.submit();
+
+
         }
 
     </script>
@@ -48,7 +50,7 @@
     <div class="am-collapse am-topbar-collapse" id="blog-collapse">
         <ul class="am-nav am-nav-pills am-topbar-nav">
             <li><a href="index.html">首页</a></li>
-            <li class="am-active"><a href="foundServlet">发现</a></li>
+            <li class="am-active"><a href="found.jsp">发现</a></li>
             <li><a href="myconcern.html">我的关注</a></li>
 
 
@@ -108,11 +110,11 @@
             <c:forEach items="${articleList }" var="article">
                 <article class="am-g blog-entry-article">
                     <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
-                        <img src="${article.article_cover }" alt="" class="am-u-sm-12">
+                        <img src="${article.article_cover}" alt="" class="am-u-sm-12">
                     </div>
                     <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
                         <span><a href="" class="blog-color">${article.article_type } &nbsp;</a></span>
-                        <span> ${article.user_name } &nbsp;</span>
+                        <span>@<a href="#">${article.user_name } &nbsp;</a></span>
                         <span>${article.article_date }</span>
                         <h1>
                             <a href="detailArticleServlet?article_id=${article.article_id}">${article.article_title }</a>
@@ -125,10 +127,11 @@
                 </article>
             </c:forEach>
 
+
             <ul class="am-pagination">
-                <li class="am-pagination-prev"><a href="javaScript:page_nav(document.forms[0],${currPageNo-1});">&laquo;
+                <li class="am-pagination-prev"><a href="javaScript:page_nav(document.forms[0],${currPageNo-1})">&laquo;
                     Prev</a></li>
-                <li class="am-pagination-next"><a href="javaScript:page_nav(document.forms[0],${currPageNo+1});">Next
+                <li class="am-pagination-next"><a href="javaScript:page_nav(document.forms[0],${currPageNo+1})">Next
                     &raquo;</a></li>
             </ul>
         </div>

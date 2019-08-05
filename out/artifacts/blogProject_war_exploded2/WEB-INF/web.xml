@@ -46,6 +46,10 @@
         <servlet-name>FoundServlet</servlet-name>
         <servlet-class>cn.com.hunau.servlet.FoundServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteCommentServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.DeleteCommentServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UploadServlet</servlet-name>
         <url-pattern>/uploadServlet</url-pattern>
@@ -69,5 +73,9 @@
     <servlet-mapping>
         <servlet-name>FoundServlet</servlet-name>
         <url-pattern>/foundServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteCommentServlet</servlet-name>
+        <url-pattern>/deleteCommentServlet</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -33,8 +33,8 @@ public class ArticleDAOImpl implements ArticleDAO {
             currPageNo--;
             // 判断是否有条件，设置占位符信息
             if (keyword != null && !keyword.equals("")) {
-                pstmt.setString(1, keyword);
-                pstmt.setString(2, keyword);
+                pstmt.setString(1, "%" + keyword + "%");
+                pstmt.setString(2, "%" + keyword + "%");
                 pstmt.setInt(3, currPageNo * number);
                 pstmt.setInt(4, number);
             } else {

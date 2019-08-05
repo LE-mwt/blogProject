@@ -24,8 +24,8 @@ public interface DetailArticleService {
     /**
      * 删除评论
      *
-     * @param detailArticleVo
+     * @param com_id
      * @return
      */
-    boolean deleteComment(DetailArticleVo detailArticleVo);
+    boolean deleteComment(int com_id);
 }

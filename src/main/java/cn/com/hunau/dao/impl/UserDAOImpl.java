@@ -20,14 +20,14 @@ public class UserDAOImpl implements UserDAO {
         ResultSet set = null;
         int count = 0;
         boolean flag = false;
-        UserPo userpo = new UserPo();
+        UserPo userpo = null;
         try {
             con = DbConnection.getInstance().getConnection();
             pstmt = con.prepareStatement("select * from user where user_name = ?");
             pstmt.setString(1, user_name);
             set = pstmt.executeQuery();
-
             while (set.next()) {
+                userpo = new UserPo();
                 userpo.setUser_id(set.getInt("user_id"));
                 userpo.setUser_name(set.getString("user_name"));
                 userpo.setUser_password(set.getString("user_password"));
@@ -52,13 +52,14 @@ public class UserDAOImpl implements UserDAO {
         ResultSet set = null;
         int count = 0;
         boolean flag = false;
-        UserPo userpo = new UserPo();
+        UserPo userpo = null;
         try {
             con = DbConnection.getInstance().getConnection();
             pstmt = con.prepareStatement("select * from user where user_id = ?");
             pstmt.setInt(1, user_id);
             set = pstmt.executeQuery();
             while (set.next()) {
+                userpo = new UserPo();
                 userpo.setUser_id(set.getInt("user_id"));
                 userpo.setUser_name(set.getString("user_name"));
                 userpo.setUser_password(set.getString("user_password"));

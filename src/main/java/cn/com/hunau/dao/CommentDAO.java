@@ -2,6 +2,7 @@ package cn.com.hunau.dao;
 
 import cn.com.hunau.po.CommentPo;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 public interface CommentDAO {
@@ -24,13 +25,20 @@ public interface CommentDAO {
     List<CommentPo> findCommentsByComments(int article_id, int com_id);
 
     /**
-     * 判断该评论是否是该用户的
+     * 得到一个用户的所有评论的文章
      *
      * @param user_id
-     * @param com_id
      * @return
      */
-    boolean findCommentsByUser(int user_id, int com_id);
+    List<CommentPo> findCommentsByUser(int user_id);
+
+    /**
+     * 得到一个文章中的评论的最新时间
+     *
+     * @param article_id
+     * @return
+     */
+    Timestamp findCommentsByTime(int article_id);
 
     /**
      * 添加对文章的评论
@@ -44,5 +52,5 @@ public interface CommentDAO {
      *
      * @param com_id
      */
-    void deleteComment(int com_id);
+    boolean deleteComment(int com_id);
 }

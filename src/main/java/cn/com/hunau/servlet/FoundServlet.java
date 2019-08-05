@@ -34,7 +34,7 @@ public class FoundServlet extends HttpServlet {
 		}
 
 		ArticleService articleService = ServiceFactory.buildServiceFactory().createArticleService();
-		List<ArticleVo> articleList = articleService.findArticleByTime(currPageNo, 2, keywords);
+		List<ArticleVo> articleList = articleService.findArticleByTime(currPageNo, 3, keywords);
 		System.out.println(articleList);
 //		 * 3.5 将List设置在request中
 		request.setAttribute("currPageNo", currPageNo);

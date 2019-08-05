@@ -110,7 +110,7 @@
         <a href="message.html" title="我的消息"><img class="add2" src="images/mes84.png "
                                                  style="height:30px;width:30px"/></a>
 
-        <div class="dropdown" style="width:170px;margin-top:15px;">
+        <div class="dropdown" style="width:170px;margin-top:15px;font-size:16px">
 
             <!-------------------1.已经登录成功----------------------- -->
             <span id="hello">美少女</span>，你好！

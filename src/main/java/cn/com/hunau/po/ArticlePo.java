@@ -100,4 +100,20 @@ public class ArticlePo {
                 " article_type= " + article_type + " article_context= " + article_context + "article_private= " + article_private +
                 " user_id= " + user_id;
     }
+
+    @Override
+    public int hashCode() {
+        //修改hashcode
+        return this.getArticle_id();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof ArticlePo)) {
+            return false;
+        }
+        ArticlePo m = (ArticlePo) obj;//向下转型
+        //id相同则任务是同一个对象
+        return this.getArticle_id() == m.getArticle_id();
+    }
 }

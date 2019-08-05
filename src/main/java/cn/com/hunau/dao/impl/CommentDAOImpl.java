@@ -114,7 +114,7 @@ public class CommentDAOImpl implements CommentDAO {
 
     @Override
     public Timestamp findCommentsByTime(int article_id) {
-        Timestamp time = new Timestamp(System.currentTimeMillis());
+        Timestamp time = null;
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet result = null;

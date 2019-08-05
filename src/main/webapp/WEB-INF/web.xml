@@ -50,6 +50,26 @@
         <servlet-name>DeleteCommentServlet</servlet-name>
         <servlet-class>cn.com.hunau.servlet.DeleteCommentServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ShowMessageServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.ShowMessageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DynamicImageServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.DynamicImageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegistServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.RegistServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.WelcomeServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UploadServlet</servlet-name>
         <url-pattern>/uploadServlet</url-pattern>
@@ -77,5 +97,25 @@
     <servlet-mapping>
         <servlet-name>DeleteCommentServlet</servlet-name>
         <url-pattern>/deleteCommentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowMessageServlet</servlet-name>
+        <url-pattern>/showMessageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DynamicImageServlet</servlet-name>
+        <url-pattern>/dynamicImageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistServlet</servlet-name>
+        <url-pattern>/registServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <url-pattern>/welcomeServlet</url-pattern>
     </servlet-mapping>
 </web-app>

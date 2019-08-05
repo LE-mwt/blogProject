@@ -88,8 +88,19 @@ public class ServiceFactory {
         return service;
     }
 
+    public MessageService createMessageService() {
+        MessageService service = null;
+        try {
+            service = (MessageService) this.createObject(this.properties.getProperty("messageService"));
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+        return service;
+    }
+
     public static void main(String[] args) {
-        ArticleService service = ServiceFactory.buildServiceFactory().createArticleService();
+        MessageService service = ServiceFactory.buildServiceFactory().createMessageService();
         System.out.println(service);
     }
 }

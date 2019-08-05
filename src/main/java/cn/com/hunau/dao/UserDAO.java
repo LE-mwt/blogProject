@@ -52,4 +52,6 @@ public interface UserDAO {
 
     public boolean updateFreezeUser_states(int user_id);
 
+    public boolean findUserByUser_name(String user_name);
+
 }

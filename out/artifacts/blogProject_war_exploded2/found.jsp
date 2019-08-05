@@ -1,3 +1,5 @@
+<%@ page import="cn.com.hunau.vo.ArticleVo" %>
+<%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -94,7 +96,9 @@
     </div>
 </nav>
 <hr>
-
+<%
+    List<ArticleVo> articleList = (List<ArticleVo>) request.getAttribute("articleList");
+%>
 
 <!-- content srart -->
 <div class="bback" style="
@@ -131,7 +135,7 @@
             <ul class="am-pagination">
                 <li class="am-pagination-prev"><a href="javaScript:page_nav(document.forms[0],${currPageNo-1})">&laquo;
                     Prev</a></li>
-                <li class="am-pagination-next"><a href="page_nav(document.forms[0],${currPageNo+1})">Next
+                <li class="am-pagination-next"><a href="javaScript:page_nav(document.forms[0],${currPageNo+1})">Next
                     &raquo;</a></li>
             </ul>
         </div>

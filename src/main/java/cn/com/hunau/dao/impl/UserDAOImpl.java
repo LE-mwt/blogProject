@@ -1,306 +1,337 @@
 package cn.com.hunau.dao.impl;
 
-import cn.com.hunau.dao.UserDAO;
-import cn.com.hunau.db.DbConnection;
-import cn.com.hunau.po.UserPo;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+
+import cn.com.hunau.dao.FansDAO;
+import cn.com.hunau.dao.UserDAO;
+import cn.com.hunau.db.DbConnection;
+import cn.com.hunau.po.FansPo;
+import cn.com.hunau.po.UserPo;
 
 public class UserDAOImpl implements UserDAO {
 
+	
+	
+	public UserPo findUserioByUser_name(String user_name) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet set = null;
+		int count = 0;
+		boolean flag = false;
+		UserPo userpo = new UserPo();
+		try {
+			con = DbConnection.getInstance().getConnection();
+			pstmt = con.prepareStatement("select * from user where user_name = ?");
+			pstmt.setString(1, user_name);
+			set = pstmt.executeQuery();
 
-    public UserPo findUserioByUser_name(String user_name) {
-        Connection con = null;
-        PreparedStatement pstmt = null;
-        ResultSet set = null;
-        int count = 0;
-        boolean flag = false;
-        UserPo userpo = null;
-        try {
-            con = DbConnection.getInstance().getConnection();
-            pstmt = con.prepareStatement("select * from user where user_name = ?");
-            pstmt.setString(1, user_name);
-            set = pstmt.executeQuery();
-            while (set.next()) {
-                userpo = new UserPo();
-                userpo.setUser_id(set.getInt("user_id"));
-                userpo.setUser_name(set.getString("user_name"));
-                userpo.setUser_password(set.getString("user_password"));
-                userpo.setUser_picture(set.getString("user_picture"));
-                userpo.setUser_sex(set.getString("user_sex"));
-                userpo.setUser_address(set.getString("user_address"));
-                userpo.setUser_signature(set.getString("user_signature"));
-                userpo.setStates(set.getInt("user_states"));
-            }
+			while (set.next()) {
+				userpo.setUser_id(set.getInt("user_id"));
+				userpo.setUser_name(set.getString("user_name"));
+				userpo.setUser_password(set.getString("user_password"));
+				userpo.setUser_picture(set.getString("user_picture"));
+				userpo.setUser_sex(set.getString("user_sex"));
+				userpo.setUser_address(set.getString("user_address"));
+				userpo.setUser_signature(set.getString("user_signature"));
+				userpo.setStates(set.getInt("user_states"));
+			}
 
-        } catch (SQLException e) {
-            e.getStackTrace();
-        }
+		} catch (SQLException e) {
+			e.getStackTrace();
+		}
 
-        return userpo;
+		return userpo;
 
-    }
+	}
 
-    public UserPo findUserioByUser_id(int user_id) {
-        Connection con = null;
-        PreparedStatement pstmt = null;
-        ResultSet set = null;
-        int count = 0;
-        boolean flag = false;
-        UserPo userpo = null;
-        try {
-            con = DbConnection.getInstance().getConnection();
-            pstmt = con.prepareStatement("select * from user where user_id = ?");
-            pstmt.setInt(1, user_id);
-            set = pstmt.executeQuery();
-            while (set.next()) {
-                userpo = new UserPo();
-                userpo.setUser_id(set.getInt("user_id"));
-                userpo.setUser_name(set.getString("user_name"));
-                userpo.setUser_password(set.getString("user_password"));
-                userpo.setUser_picture(set.getString("user_picture"));
-                userpo.setUser_sex(set.getString("user_sex"));
-                userpo.setUser_address(set.getString("user_address"));
-                userpo.setUser_signature(set.getString("user_signature"));
-                userpo.setStates(set.getInt("user_states"));
-            }
-        } catch (SQLException e) {
-            e.getStackTrace();
-        }
+	public UserPo findUserioByUser_id(int user_id) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet set = null;
+		int count = 0;
+		boolean flag = false;
+		UserPo userpo = new UserPo();
+		try {
+			con = DbConnection.getInstance().getConnection();
+			pstmt = con.prepareStatement("select * from user where user_id = ?");
+			pstmt.setInt(1, user_id);
+			set = pstmt.executeQuery();
 
-        return userpo;
+			while (set.next()) {
+				userpo.setUser_id(set.getInt("user_id"));
+				userpo.setUser_name(set.getString("user_name"));
+				userpo.setUser_password(set.getString("user_password"));
+				userpo.setUser_picture(set.getString("user_picture"));
+				userpo.setUser_sex(set.getString("user_sex"));
+				userpo.setUser_address(set.getString("user_address"));
+				userpo.setUser_signature(set.getString("user_signature"));
+				userpo.setStates(set.getInt("user_states"));
+			}
 
-    }
+		} catch (SQLException e) {
+			e.getStackTrace();
+		}
 
-    @Override
-    public boolean checkUser(String user_name, String user_password) {
-        // TODO Auto-generated method stub
-        Connection con = null;
-        PreparedStatement pstmt = null;
-        ResultSet set = null;
-        int count = 0;
-        boolean flag = false;
-        try {
-            con = DbConnection.getInstance().getConnection();
-            pstmt = con.prepareStatement("select * from user where user_name = ? and user_password = ?");
-            pstmt.setString(1, user_name);
-            pstmt.setString(2, user_password);
-            set = pstmt.executeQuery();
-            while (set.next()) {
-                count++;
-            }
-            if (count != 0) {
-                flag = true;
-            }
+		return userpo;
 
-        } catch (SQLException e) {
+	}
 
-        }
+	@Override
+	public boolean checkUser(String user_name, String user_password) {
+		// TODO Auto-generated method stub
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet set = null;
+		int count = 0;
+		boolean flag = false;
+		try {
+			con = DbConnection.getInstance().getConnection();
+			pstmt = con.prepareStatement("select * from user where user_name = ? and user_password = ?");
+			pstmt.setString(1, user_name);
+			pstmt.setString(2, user_password);
+			set = pstmt.executeQuery();
+			while (set.next()) {
+				count++;
+			}
+			if (count != 0) {
+				flag = true;
+			}
 
-        return flag;
-    }
+		} catch (SQLException e) {
 
-    @Override
-    public boolean addUser(String user_name, String user_password) {
-        // TODO Auto-generated method stub
-        boolean flag = false;
-        Connection con = null;
-        PreparedStatement pstmt = null;
-        con = DbConnection.getInstance().getConnection();
+		}
 
-        try {
+		return flag;
+	}
 
-            pstmt = con.prepareStatement("insert into user(user_name,user_password) values(?,?)");
-            pstmt.setString(1, user_name);
-            pstmt.setString(2, user_password);
-            int count = pstmt.executeUpdate();
+	@Override
+	public boolean addUser(String user_name, String user_password) {
+		// TODO Auto-generated method stub
+		boolean flag = false;
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		con = DbConnection.getInstance().getConnection();
 
-            if (count != 0) {
-                flag = true;
+		try {
+			long time = new Date().getTime();
+			String id = String.valueOf(time).substring(5);
+			pstmt = con.prepareStatement("insert into user(user_name,user_password,user_id) values(?,?,?)");
+			pstmt.setString(1, user_name);
+			pstmt.setString(2, user_password);
+			pstmt.setString(3, id);
+			int count = pstmt.executeUpdate();
 
-            }
+			if (count != 0) {
+				flag = true;
 
-        } catch (Exception e) {
+			}
 
-            e.printStackTrace();
-        }
+		} catch (Exception e) {
 
-        return flag;
+			e.printStackTrace();
+		}
 
-    }
+		return flag;
 
-    @Override
-    public boolean updateUser_picture(String user_name, String user_picture) {
-        // TODO Auto-generated method stub
-        boolean flag = false;
-        Connection con = null;
-        PreparedStatement pstmt = null;
-        con = DbConnection.getInstance().getConnection();
-        try {
+	}
 
-            pstmt = con.prepareStatement("UPDATE user SET user_picture = ? where user_name = ? ");
-            pstmt.setString(1, user_picture);
-            pstmt.setString(2, user_name);
-            int count = pstmt.executeUpdate();
-            if (count != 0) {
-                flag = true;
+	@Override
+	public boolean updateUser_picture(String user_name, String user_picture) {
+		// TODO Auto-generated method stub
+		boolean flag = false;
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		con = DbConnection.getInstance().getConnection();
+		try {
 
-            }
+			pstmt = con.prepareStatement("UPDATE user SET user_picture = ? where user_name = ? ");
+			pstmt.setString(1, user_picture);
+			pstmt.setString(2, user_name);
+			int count = pstmt.executeUpdate();
+			if (count != 0) {
+				flag = true;
 
-        } catch (Exception e) {
+			}
 
-            e.getStackTrace();
-        }
-        return flag;
+		} catch (Exception e) {
 
-    }
+			e.getStackTrace();
+		}
+		return flag;
 
-    @Override
-    public boolean updateUserio(String user_name, String user_address, String user_sex, String user_signature) {
-        // TODO Auto-generated method stub
-        boolean flag = false;
-        Connection con = null;
-        PreparedStatement pstmt = null;
-        con = DbConnection.getInstance().getConnection();
-        try {
+	}
 
-            pstmt = con.prepareStatement(
-                    "UPDATE user SET  user_address = ?,user_sex = ?,user_signature = ? where user_name = ?");
-            pstmt.setString(1, user_address);
-            pstmt.setString(2, user_sex);
-            pstmt.setString(3, user_signature);
-            pstmt.setString(4, user_name);
-            int count = pstmt.executeUpdate();
-            if (count != 0) {
-                flag = true;
+	@Override
+	public boolean updateUserio(String user_name, String user_address, String user_sex, String user_signature) {
+		// TODO Auto-generated method stub
+		boolean flag = false;
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		con = DbConnection.getInstance().getConnection();
+		try {
 
-            }
+			pstmt = con.prepareStatement(
+					"UPDATE user SET  user_address = ?,user_sex = ?,user_signature = ? where user_name = ?");
+			pstmt.setString(1, user_address);
+			pstmt.setString(2, user_sex);
+			pstmt.setString(3, user_signature);
+			pstmt.setString(4, user_name);
+			int count = pstmt.executeUpdate();
+			if (count != 0) {
+				flag = true;
 
-        } catch (Exception e) {
+			}
 
-            e.getStackTrace();
-        }
+		} catch (Exception e) {
 
-        return flag;
+			e.getStackTrace();
+		}
 
-    }
+		return flag;
 
-    @Override
-    public List<UserPo> finAllUser() {
-        // TODO Auto-generated method stub
-        List<UserPo> userList = null;
-        Connection con = null;
-        PreparedStatement pstmt = null;
-        ResultSet set = null;
-        int count = 0;
-        boolean flag = false;
+	}
 
-        try {
-            con = DbConnection.getInstance().getConnection();
-            pstmt = con.prepareStatement("select * from user ");
+	@Override
+	public List<UserPo> finAllUser() {
+		// TODO Auto-generated method stub
+		List<UserPo> userList = null;
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet set = null;
+		int count = 0;
+		boolean flag = false;
+		
+		try {
+			con = DbConnection.getInstance().getConnection();
+			pstmt = con.prepareStatement("select * from user ");
+			
+			set = pstmt.executeQuery();
+			userList = new ArrayList<UserPo>();
+			while (set.next()) {
+				UserPo userpo = new UserPo();
+				userpo.setUser_id(set.getInt("user_id"));
+				userpo.setUser_name(set.getString("user_name"));
+				userpo.setUser_password(set.getString("user_password"));
+				userpo.setUser_picture(set.getString("user_picture"));
+				userpo.setUser_sex(set.getString("user_sex"));
+				userpo.setUser_address(set.getString("user_address"));
+				userpo.setUser_signature(set.getString("user_signature"));
+				userpo.setStates(set.getInt("user_states"));
+				userList.add(userpo);
+			}
 
-            set = pstmt.executeQuery();
-            userList = new ArrayList<UserPo>();
-            while (set.next()) {
-                UserPo userpo = new UserPo();
-                userpo.setUser_id(set.getInt("user_id"));
-                userpo.setUser_name(set.getString("user_name"));
-                userpo.setUser_password(set.getString("user_password"));
-                userpo.setUser_picture(set.getString("user_picture"));
-                userpo.setUser_sex(set.getString("user_sex"));
-                userpo.setUser_address(set.getString("user_address"));
-                userpo.setUser_signature(set.getString("user_signature"));
-                userpo.setStates(set.getInt("user_states"));
-                userList.add(userpo);
-            }
+		} catch (SQLException e) {
+			e.getStackTrace();
+		}
 
-        } catch (SQLException e) {
-            e.getStackTrace();
-        }
+		return userList;
 
-        return userList;
+		
+	}
+	public boolean updateOnlineUser_states(int user_id) {
+		boolean flag = false;
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		con = DbConnection.getInstance().getConnection();
+		try {
 
+			pstmt = con.prepareStatement(
+					"UPDATE user SET  user_states = 1 where user_name = ?");
+			pstmt.setInt(1, user_id);
+			int count = pstmt.executeUpdate();
+			if (count != 0) {
+				flag = true;
 
-    }
+			}
 
-    public boolean updateOnlineUser_states(int user_id) {
-        boolean flag = false;
-        Connection con = null;
-        PreparedStatement pstmt = null;
-        con = DbConnection.getInstance().getConnection();
-        try {
+		} catch (Exception e) {
 
-            pstmt = con.prepareStatement(
-                    "UPDATE user SET  user_states = 1 where user_name = ?");
-            pstmt.setInt(1, user_id);
-            int count = pstmt.executeUpdate();
-            if (count != 0) {
-                flag = true;
+			e.getStackTrace();
+		}
 
-            }
+		return flag;
 
-        } catch (Exception e) {
+	}
+	public boolean updateUnOnlineUser_states(int user_id) {
+		boolean flag = false;
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		con = DbConnection.getInstance().getConnection();
+		try {
 
-            e.getStackTrace();
-        }
+			pstmt = con.prepareStatement(
+					"UPDATE user SET  user_states = 2 where user_name = ?");
+			pstmt.setInt(1, user_id);
+			int count = pstmt.executeUpdate();
+			if (count != 0) {
+				flag = true;
 
-        return flag;
+			}
 
-    }
+		} catch (Exception e) {
 
-    public boolean updateUnOnlineUser_states(int user_id) {
-        boolean flag = false;
-        Connection con = null;
-        PreparedStatement pstmt = null;
-        con = DbConnection.getInstance().getConnection();
-        try {
+			e.getStackTrace();
+		}
 
-            pstmt = con.prepareStatement(
-                    "UPDATE user SET  user_states = 2 where user_name = ?");
-            pstmt.setInt(1, user_id);
-            int count = pstmt.executeUpdate();
-            if (count != 0) {
-                flag = true;
+		return flag;
 
-            }
+	}
+	  public boolean updateFreezeUser_states(int user_id) {
+		  boolean flag = false;
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			con = DbConnection.getInstance().getConnection();
+			try {
 
-        } catch (Exception e) {
+				pstmt = con.prepareStatement(
+						"UPDATE user SET  user_states = 0 where user_name = ?");
+				pstmt.setInt(1, user_id);
+				int count = pstmt.executeUpdate();
+				if (count != 0) {
+					flag = true;
 
-            e.getStackTrace();
-        }
+				}
 
-        return flag;
+			} catch (Exception e) {
 
-    }
+				e.getStackTrace();
+			}
 
-    public boolean updateFreezeUser_states(int user_id) {
-        boolean flag = false;
-        Connection con = null;
-        PreparedStatement pstmt = null;
-        con = DbConnection.getInstance().getConnection();
-        try {
+			return flag;
+ 
+	  }
 
-            pstmt = con.prepareStatement(
-                    "UPDATE user SET  user_states = 0 where user_name = ?");
-            pstmt.setInt(1, user_id);
-            int count = pstmt.executeUpdate();
-            if (count != 0) {
-                flag = true;
+	@Override
+	public boolean findUserByUser_name(String user_name) {
+		// TODO Auto-generated method stub
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet set = null;
+		int count = 0;
+		boolean flag = false;
+		try {
+			con = DbConnection.getInstance().getConnection();
+			pstmt = con.prepareStatement("select * from user where user_name = ? ");
+			pstmt.setString(1, user_name);
+			set = pstmt.executeQuery();
+			while (set.next()) {
+				count++;
+			}
+			if (count != 0) {
+				flag = true;
+			}
 
-            }
+		} catch (SQLException e) {
 
-        } catch (Exception e) {
+		}
 
-            e.getStackTrace();
-        }
-
-        return flag;
-
-    }
-
+		return flag;
+	}
+	
 }

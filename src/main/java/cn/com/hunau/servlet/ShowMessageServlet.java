@@ -18,6 +18,15 @@ public class ShowMessageServlet extends HttpServlet {
         int user_id = Integer.parseInt(id);
         MessageService messageService = ServiceFactory.buildServiceFactory().createMessageService();
         List<MessageVo> messages = messageService.findMessageByUser(user_id);
+        //整体判断是否有新消息
+        int count = 0;
+        for (MessageVo message : messages
+        ) {
+            if (message.getNewMessage().equals("isNew")) {
+                count++;
+            }
+        }
+        req.setAttribute("haveNew", count);
         req.setAttribute("messagesList", messages);
         req.getRequestDispatcher("/message.jsp").forward(req, resp);
     }

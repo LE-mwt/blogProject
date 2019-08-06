@@ -161,6 +161,8 @@
                         <span><a href="#" class="blog-color"><%=article.getArticle_type()%> &nbsp;</a></span>-
                         <span><a href="#">@<%=user.getUser_name()%> &nbsp;</a></span>-
                         <span><a href="#"><%=article.getArticle_date().toString().substring(0, 10)%></a></span>
+                        <img src="images/eyes.png"
+                             style="height:20px;width:20px;margin-left:20px;"><span><%=article.getArticle_viewcount()%></span>
                     </p>
                 </div>
                 <div class="am-article-bd">
@@ -348,11 +350,6 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="assets/js/jquery.min.js"></script>
 <!--<![endif]-->
-<!--[if lte IE 8 ]>
-<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
-<![endif]-->
 <script src="assets/js/amazeui.min.js"></script>
 <!-- <script src="assets/js/app.js"></script> -->
 </body>

@@ -1,9 +1,12 @@
 package cn.com.hunau.vo;
 
+import java.sql.Timestamp;
+
 public class MessageVo {
+    //最新的动态时间
+    private Timestamp theLastTime;
     //与我有关的文章
     private ArticleVo aboutMeArticles;
-
     //年
     private String year;
     //月
@@ -12,6 +15,24 @@ public class MessageVo {
     private String day;
     //分秒
     private String min;
+    //是否是新信息
+    private String newMessage;
+
+    public String getNewMessage() {
+        return newMessage;
+    }
+
+    public void setNewMessage(String newMessage) {
+        this.newMessage = newMessage;
+    }
+
+    public Timestamp getTheLastTime() {
+        return theLastTime;
+    }
+
+    public void setTheLastTime(Timestamp theLastTime) {
+        this.theLastTime = theLastTime;
+    }
 
     public String getYear() {
         return year;
@@ -57,7 +78,7 @@ public class MessageVo {
     @Override
     public int hashCode() {
         //修改hashcode
-        return this.getAboutMeArticles().hashCode();
+        return this.getAboutMeArticles().getArticlePo().hashCode();
     }
 
     @Override
@@ -67,6 +88,6 @@ public class MessageVo {
         }
         MessageVo m = (MessageVo) obj;//向下转型
         //id相同则任务是同一个对象
-        return this.getAboutMeArticles().equals(m.getAboutMeArticles());
+        return this.getAboutMeArticles().getArticlePo().equals(m.getAboutMeArticles().getArticlePo());
     }
 }

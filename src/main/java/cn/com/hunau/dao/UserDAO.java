@@ -54,4 +54,11 @@ public interface UserDAO {
 
     public boolean findUserByUser_name(String user_name);
 
+    /**
+     * 根据用户名查找出所有关注的人的信息
+     *
+     * @param user_id
+     * @return
+     */
+    public List<UserPo> findAllMyConcern(int user_id);
 }

@@ -34,6 +34,13 @@ public class DetailArticleServiceImpl implements DetailArticleService {
         articleVo.setArticle_context(articlePo.getArticle_context());
         articleVo.setArticle_type(articlePo.getArticle_type());
         articleVo.setArticle_title(articlePo.getArticle_title());
+        boolean flag = articleDAO.updateArticleViewCount(article_id, articlePo.getArticle_viewcount() + 1);
+        if (flag) {
+            ArticlePo po = articleDAO.findArticleByid(article_id);
+            articleVo.setArticle_viewcount(po.getArticle_viewcount());
+        } else {
+            articleVo.setArticle_viewcount(articlePo.getArticle_viewcount());
+        }
         /**
          * 文章的评论
          */
@@ -60,6 +67,6 @@ public class DetailArticleServiceImpl implements DetailArticleService {
     public static void main(String[] args) {
         DetailArticleService service = ServiceFactory.buildServiceFactory().createDetailArticleService();
         DetailArticleVo article = service.findArticleByArticle_id(1);
-        System.out.println(article.getUser().getUser_id());
+        System.out.println(article.getArticle_viewcount());
     }
 }

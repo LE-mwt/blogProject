@@ -19,8 +19,9 @@ public class CommentDAOImpl implements CommentDAO {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet result = null;
+        DbConnection dbConn = DbConnection.getInstance();
+        conn = dbConn.getConnection();
         try {
-            conn = DbConnection.getInstance().getConnection();
             String sql = "select * from comments where article_id=? and com_parentid is null";
             pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, article_id);
@@ -46,6 +47,8 @@ public class CommentDAOImpl implements CommentDAO {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            dbConn.close(conn, pstmt, result);
         }
         return list;
     }
@@ -56,7 +59,8 @@ public class CommentDAOImpl implements CommentDAO {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet result = null;
-        conn = DbConnection.getInstance().getConnection();
+        DbConnection dbConn = DbConnection.getInstance();
+        conn = dbConn.getConnection();
         String sql = "select * from comments where article_id = ? and com_parentid = ?";
         try {
             pstmt = conn.prepareStatement(sql);
@@ -82,6 +86,8 @@ public class CommentDAOImpl implements CommentDAO {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            dbConn.close(conn, pstmt, result);
         }
         return list;
     }
@@ -92,7 +98,8 @@ public class CommentDAOImpl implements CommentDAO {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet result = null;
-        conn = DbConnection.getInstance().getConnection();
+        DbConnection dbConn = DbConnection.getInstance();
+        conn = dbConn.getConnection();
         String sql = "select * from comments where user_id = ?";
         try {
             pstmt = conn.prepareStatement(sql);
@@ -108,6 +115,8 @@ public class CommentDAOImpl implements CommentDAO {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            dbConn.close(conn, pstmt, result);
         }
         return list;
     }
@@ -118,7 +127,8 @@ public class CommentDAOImpl implements CommentDAO {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet result = null;
-        conn = DbConnection.getInstance().getConnection();
+        DbConnection dbConn = DbConnection.getInstance();
+        conn = dbConn.getConnection();
         String sql = "select com_time from comments where article_id = ?";
         try {
             pstmt = conn.prepareStatement(sql);
@@ -132,6 +142,8 @@ public class CommentDAOImpl implements CommentDAO {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            dbConn.close(conn, pstmt, result);
         }
         return time;
     }
@@ -141,7 +153,8 @@ public class CommentDAOImpl implements CommentDAO {
         boolean flag = false;
         Connection conn = null;
         PreparedStatement pstmt = null;
-        conn = DbConnection.getInstance().getConnection();
+        DbConnection dbConn = DbConnection.getInstance();
+        conn = dbConn.getConnection();
         String sql = "";
         try {
             if (commentPo.getCom_parentid() != 0) {
@@ -172,7 +185,8 @@ public class CommentDAOImpl implements CommentDAO {
         boolean flag = false;
         Connection conn = null;
         PreparedStatement pstmt = null;
-        conn = DbConnection.getInstance().getConnection();
+        DbConnection dbConn = DbConnection.getInstance();
+        conn = dbConn.getConnection();
         String sql = "delete from comments where com_id = ?";
         try {
             pstmt = conn.prepareStatement(sql);

@@ -76,8 +76,20 @@
 
         <a href="writeArticle.jsp" title="写文章"><img class="add" src="images/write84.png"
                                                     style="height:30px;width:30px"/></a>
-        <a href="message.html" title="我的消息"><img class="add2" src="images/mes84.png "
-                                                 style="height:30px;width:30px"/></a>
+        <a href="message.html" title="我的消息">
+            <%--            <img class="add2" src="images/mes84.png "--%>
+            <%--                                                 style="height:30px;width:30px"/></a>--%>
+            <c:choose>
+                <%--有新消息--%>
+                <%--消息条数为 ${havaNew} --%>
+            <c:when test="${not empty haveNew}">
+            <img class="add2" src="images/mes84.png " style="height:30px;width:30px"/></a>
+        </c:when>
+            <%--无新消息--%>
+        <c:otherwise>
+            <img class="add2" src="images/write84.png " style="height:30px;width:30px"/></a>
+        </c:otherwise>
+        </c:choose>
 
         <div class="dropdown" style="width:170px">
 
@@ -118,19 +130,40 @@
     <div class="am-g am-g-fixed blog-fixed blog-content">
         <div class="am-u-sm-12">
 
-            <div class="timeline-year">
-                <h1>2019年8月</h1>
-                <hr>
-                <ul>
-                    <%--                    <h3>3日</h3>--%>
-                    <%--                    <hr>--%>
-
-                    <c:forEach items="${messagesList}" var="message">
+            <div class="timeline-year" id="context">
+                <c:forEach items="${messagesList}" var="message">
+                    <script type="text/javascript">
+                        var month;
+                        var m = "<br/><h1 style='margin-top:0px;'>${message.year}年${message.month}月</h1><hr>";
+                        if (month != '${message.month}') {
+                            document.getElementById("context").innerHTML += m;
+                        }
+                    </script>
+                    <ul id="${message.aboutMeArticles.article_id}">
+                        <script type="text/javascript">
+                            var day;
+                            var s = "<br/><h3 style='margin-top:0px;'>${message.day}日</h3><hr>";
+                            if (day != '${message.day}') {
+                                document.getElementById('${message.aboutMeArticles.article_id}').innerHTML = document.getElementById('${message.aboutMeArticles.article_id}').innerHTML += s;
+                            }
+                        </script>
                         <li style="line-height: 3;">
                             <span class="am-u-sm-4 am-u-md-2 timeline-span"
-                                  style="max-width: 10em;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${message.day}日${message.min}</span>
+                                  style="max-width: 10em;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${message.min}</span>
+                            <c:choose>
+                                <c:when test="${not empty message.newMessage}">
                             <span class=" am-u-sm-8 am-u-md-6"><a
-                                    href="#">${message.aboutMeArticles.article_title}</a></span>
+                                    href="#" style="color: red;">${message.aboutMeArticles.article_title}
+                                ("有新消息！")</a>
+                                </span>
+                                </c:when>
+                                <c:otherwise>
+                                    <span class=" am-u-sm-8 am-u-md-6"><a
+                                            href="#">${message.aboutMeArticles.article_title}</a>
+                                        </span>
+                                </c:otherwise>
+                            </c:choose>
+
                             <c:choose>
                                 <c:when test="${!empty message.aboutMeArticles.article_type}">
                                     <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only"
@@ -141,12 +174,16 @@
                                 </c:otherwise>
                             </c:choose>
                             <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">${message.aboutMeArticles.user_name}</span>
-                                <%--                            <script type="text/javascript">--%>
-                                <%--                                alert(${message.aboutMeArticles.user_name});--%>
-                                <%--                            </script>--%>
+                            <script type="text/javascript">
+                                <%--alert(${message.day}+"," + day);--%>
+                                day = ${message.day};
+                                // alert("day=" + day);
+                                month = ${message.month};
+                            </script>
                         </li>
-                    </c:forEach>
-                </ul>
+                    </ul>
+                    <br/>
+                </c:forEach>
             </div>
             <%--                <br>--%>
             <%--                <ul>--%>

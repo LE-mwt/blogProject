@@ -4,14 +4,124 @@ import cn.com.hunau.dao.ArticleDAO;
 import cn.com.hunau.db.DbConnection;
 import cn.com.hunau.po.ArticlePo;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Timestamp;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ArticleDAOImpl implements ArticleDAO {
+
+    @Override
+    public List<ArticlePo> findMyConcernArticle(int user_id, int currPageNo, int number, String keyword) {
+        List<ArticlePo> articleList = null;
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        DbConnection dbConn = DbConnection.getInstance();
+        try {
+            conn = dbConn.getConnection();
+            String sql = "select a.article_id,a.article_title,a.article_cover,a.article_type,a.article_private,"
+                    + "a.article_context,a.article_date,a.article_viewcount,a.user_id from article a,"
+                    + "fans f where f.f_fan_id= ? and f.f_user_id=a.user_id and a.article_private=0";
+            // 判断是否有查询条件，如果有，就在sql后添加where语句
+            if (keyword != null && !(keyword = keyword.trim()).equals("")) {
+                sql += " and (a.article_title like ? or a.article_type like ?) ";
+            }
+            sql += " order by a.article_date desc limit ?,?";
+            System.out.println(sql);
+
+            pstmt = conn.prepareStatement(sql);
+            currPageNo--;
+            if (keyword != null && !keyword.equals("")) {
+                pstmt.setInt(1, user_id);
+                pstmt.setString(2, "%" + keyword + "%");
+                pstmt.setString(3, "%" + keyword + "%");
+                pstmt.setInt(4, currPageNo * number);
+                pstmt.setInt(5, number);
+            } else {
+                pstmt.setInt(1, user_id);
+                pstmt.setInt(2, currPageNo * number);
+                pstmt.setInt(3, number);
+            }
+            rs = pstmt.executeQuery();
+            if (rs != null) {
+                articleList = new ArrayList<ArticlePo>();
+                ArticlePo article = null;
+                while (rs.next()) {
+                    article = new ArticlePo();
+                    article.setArticle_context(rs.getString("article_context"));
+                    article.setArticle_cover(rs.getString("article_cover"));
+                    article.setArticle_date(rs.getTimestamp("article_date"));
+                    article.setArticle_id(rs.getInt("article_id"));
+                    article.setArticle_private(rs.getInt("article_private"));
+                    article.setArticle_title(rs.getString("article_title"));
+                    article.setArticle_type(rs.getString("article_type"));
+                    article.setArticle_viewcount(rs.getInt("article_viewcount"));
+                    article.setUser_id(rs.getInt("user_id"));
+                    articleList.add(article);
+
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            dbConn.close(conn, pstmt, rs);
+        }
+        return articleList;
+    }
+
+    @Override
+    public int findArticleCount() {
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet set = null;
+        int count = 0;
+        DbConnection dbConn = DbConnection.getInstance();
+        try {
+            con = dbConn.getConnection();
+            pstmt = con.prepareStatement("select * from article");
+
+            set = pstmt.executeQuery();
+
+            while (set.next()) {
+                count++;
+            }
+
+        } catch (SQLException e) {
+            e.getStackTrace();
+        } finally {
+            dbConn.close(con, pstmt, set);
+        }
+
+        return count;
+
+    }
+
+    @Override
+    public int findWebViewCount() {
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet set = null;
+        int count = 0;
+        DbConnection dbConn = DbConnection.getInstance();
+        try {
+            con = dbConn.getConnection();
+            pstmt = con.prepareStatement("select sum(article_viewcount) a from article");
+
+            set = pstmt.executeQuery();
+
+            while (set.next()) {
+                count = set.getInt("a");
+            }
+
+        } catch (SQLException e) {
+            e.getStackTrace();
+        } finally {
+            dbConn.close(con, pstmt, set);
+        }
+
+        return count;
+    }
 
     @Override
     public List<ArticlePo> searchAllArticle(int currPageNo, int number, String keyword) {

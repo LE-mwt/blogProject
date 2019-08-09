@@ -13,6 +13,13 @@ public class UserVo extends UserPo {
     //我的粉丝
     private List<UserPo> myFans;
 
+    public UserVo() {
+    }
+
+    public UserVo(UserPo userPo) {
+        this.userPo = userPo;
+    }
+
     public List<UserPo> getMyConcern() {
         return myConcern;
     }

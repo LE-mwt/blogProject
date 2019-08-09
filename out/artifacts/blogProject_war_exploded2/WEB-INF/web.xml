@@ -3,25 +3,46 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
     <display-name>Archetype Created Web Application</display-name>
+    <welcome-file-list>
+        <welcome-file>indexServlet</welcome-file>
+    </welcome-file-list>
+    <!--    <filter>-->
+    <!--        <filter-name>EncodingFilter</filter-name>-->
+    <!--        <filter-class>cn.com.hunau.filter.EncodingFilter</filter-class>-->
+    <!--        <init-param>-->
+    <!--            <param-name>sourceEncoding</param-name>-->
+    <!--            <param-value>iso-8859-1</param-value>-->
+    <!--        </init-param>-->
+    <!--        <init-param>-->
+    <!--            <param-name>targetEncoding</param-name>-->
+    <!--            <param-value>utf-8</param-value>-->
+    <!--        </init-param>-->
+    <!--    </filter>-->
+    <!--    <filter-mapping>-->
+    <!--        <filter-name>EncodingFilter</filter-name>-->
+    <!--        <url-pattern>/*</url-pattern>-->
+    <!--    </filter-mapping>-->
 
     <filter>
-        <filter-name>EncodingFilter</filter-name>
-        <filter-class>cn.com.hunau.filter.EncodingFilter</filter-class>
+        <filter-name>Transcoder</filter-name>
+        <filter-class>cn.com.hunau.filter.Transcoder</filter-class>
         <init-param>
-            <param-name>sourceEncoding</param-name>
+            <param-name>char1</param-name>
             <param-value>iso-8859-1</param-value>
         </init-param>
         <init-param>
-            <param-name>targetEncoding</param-name>
+            <param-name>char2</param-name>
             <param-value>utf-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>noFilter</param-name>
+            <param-value>updatePersonServlet</param-value>
         </init-param>
     </filter>
     <filter-mapping>
-        <filter-name>EncodingFilter</filter-name>
+        <filter-name>Transcoder</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-
-
     <servlet>
         <servlet-name>UploadServlet</servlet-name>
         <servlet-class>cn.com.hunau.servlet.UploadServlet</servlet-class>
@@ -70,6 +91,129 @@
         <servlet-name>WelcomeServlet</servlet-name>
         <servlet-class>cn.com.hunau.servlet.WelcomeServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>NewMessageServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.NewMessageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IndexServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.IndexServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MyConcernServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.MyConcernServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PersonCenterServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.PersonCenterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OutServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.OutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReistToLoginServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.ReistToLoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdatePersonServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.UpdatePersonServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteArticleServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.DeleteArticleServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConcernServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.ConcernServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateLastTimeServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.UpdateLastTimeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MessageNumberServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.MessageNumberServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CheckConcernServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.CheckConcernServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateUnOnlineServlet</servlet-name>
+        <servlet-class>cn.com.hunau.servlet.UpdateUnOnlineServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description></description>
+        <display-name>AdminArticleServlet</display-name>
+        <servlet-name>AdminArticleServlet</servlet-name>
+        <servlet-class>cn.com.hunau.admin.AdminArticleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminArticleServlet</servlet-name>
+        <url-pattern>/adminArticleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>AdminDetailArticleServlet</display-name>
+        <servlet-name>AdminDetailArticleServlet</servlet-name>
+        <servlet-class>cn.com.hunau.admin.AdminDetailArticleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminDetailArticleServlet</servlet-name>
+        <url-pattern>/adminDetailArticleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>AdminDeleteArticleServlet</display-name>
+        <servlet-name>AdminDeleteArticleServlet</servlet-name>
+        <servlet-class>cn.com.hunau.admin.AdminDeleteArticleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminDeleteArticleServlet</servlet-name>
+        <url-pattern>/adminDeleteArticleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>AdminIndexServlet</display-name>
+        <servlet-name>AdminIndexServlet</servlet-name>
+        <servlet-class>cn.com.hunau.admin.AdminIndexServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminIndexServlet</servlet-name>
+        <url-pattern>/adminIndexServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>AdminUserServlet</display-name>
+        <servlet-name>AdminUserServlet</servlet-name>
+        <servlet-class>cn.com.hunau.admin.AdminUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminUserServlet</servlet-name>
+        <url-pattern>/adminUserServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>DongjieUserServlet</display-name>
+        <servlet-name>DongjieUserServlet</servlet-name>
+        <servlet-class>cn.com.hunau.admin.DongjieUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DongjieUserServlet</servlet-name>
+        <url-pattern>/dongjieUserServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>CancleDongjieUserServlet</display-name>
+        <servlet-name>CancleDongjieUserServlet</servlet-name>
+        <servlet-class>cn.com.hunau.admin.CancleDongjieUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CancleDongjieUserServlet</servlet-name>
+        <url-pattern>/cancleDongjieUserServlet</url-pattern>
+    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>UploadServlet</servlet-name>
         <url-pattern>/uploadServlet</url-pattern>
@@ -117,5 +261,57 @@
     <servlet-mapping>
         <servlet-name>WelcomeServlet</servlet-name>
         <url-pattern>/welcomeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewMessageServlet</servlet-name>
+        <url-pattern>/newMessageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IndexServlet</servlet-name>
+        <url-pattern>/indexServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MyConcernServlet</servlet-name>
+        <url-pattern>/myConcernServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PersonCenterServlet</servlet-name>
+        <url-pattern>/personCenterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OutServlet</servlet-name>
+        <url-pattern>/outServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReistToLoginServlet</servlet-name>
+        <url-pattern>/reistToLoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdatePersonServlet</servlet-name>
+        <url-pattern>/updatePersonServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteArticleServlet</servlet-name>
+        <url-pattern>/deleteArticleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConcernServlet</servlet-name>
+        <url-pattern>/concernServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateLastTimeServlet</servlet-name>
+        <url-pattern>/updateLastTimeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MessageNumberServlet</servlet-name>
+        <url-pattern>/messageNumberServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckConcernServlet</servlet-name>
+        <url-pattern>/checkConcernServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateUnOnlineServlet</servlet-name>
+        <url-pattern>/updateUnOnlineServlet</url-pattern>
     </servlet-mapping>
 </web-app>

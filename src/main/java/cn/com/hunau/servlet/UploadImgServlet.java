@@ -30,6 +30,7 @@ public class UploadImgServlet extends HttpServlet {
                 // 解析请求
                 List<FileItem> items = upload.parseRequest(req);
                 for (FileItem item : items) {
+//                    System.out.println("here!!!!!");
                     // 文件
                     // 获取文件名
                     String fileName = item.getName();
@@ -38,12 +39,12 @@ public class UploadImgServlet extends HttpServlet {
                     String realPath = ctx.getRealPath("/upload/images");
                     // 写目标文件
                     if (fileName.contains(".")) {
+//                        System.out.println("-----------------------------here!!!!!");
                         //重命名文件
                         String replace = fileName.substring(0, fileName.lastIndexOf("."));
                         long time = new Date().getTime();
                         String newname = String.valueOf(time);
                         fileName = fileName.replace(replace, newname);
-
                         File file = new File(realPath + "/" + fileName);
                         item.write(file);
                         System.out.println(item.getFieldName() + ">" + file.getName() + "***********" + file.getAbsolutePath());
@@ -51,6 +52,7 @@ public class UploadImgServlet extends HttpServlet {
                         PrintWriter out = resp.getWriter();
                         //得到图片的url
                         String imgUrl = "upload/images/" + fileName;
+//                        System.out.println(imgUrl);
                         out.print(imgUrl);
                         out.flush();
                         out.close();

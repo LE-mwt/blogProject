@@ -41,7 +41,7 @@ public class CommentDAOImpl implements CommentDAO {
                     UserPo user = userDAO.findUserioByUser_id(po.getUser_id());
                     po.setUser(user);
                     list.add(po);
-                    System.out.println(po);
+                    System.out.println("----------" + po);
                     System.out.println(po.getUser().getUser_name());
                 }
             }
@@ -68,8 +68,8 @@ public class CommentDAOImpl implements CommentDAO {
             pstmt.setInt(2, com_id);
             result = pstmt.executeQuery();
             if (result != null) {
-                CommentPo po = new CommentPo();
                 while (result.next()) {
+                    CommentPo po = new CommentPo();
                     po.setCom_id(result.getInt("com_id"));
                     po.setArticle_id(result.getInt("article_id"));
                     po.setUser_id(result.getInt("user_id"));
@@ -81,7 +81,6 @@ public class CommentDAOImpl implements CommentDAO {
                     UserPo user = userDAO.findUserioByUser_id(po.getUser_id());
                     po.setUser(user);
                     list.add(po);
-                    System.out.println(po.getUser().getUser_name());
                 }
             }
         } catch (SQLException e) {
@@ -204,18 +203,11 @@ public class CommentDAOImpl implements CommentDAO {
 
     public static void main(String[] args) {
         CommentDAO dao = DAOFactory.buildDAOFactory().createCommentDAO();
-//        List<CommentPo> comments = dao.findAllCommentsByArticle(1);
-//        for (CommentPo comment : comments
-//        ) {
-//            System.out.println(comment);
-//        }
-//        List<CommentPo> commentsByUser = dao.findCommentsByUser(1);
-        List<CommentPo> commentsByUser = dao.findCommentsByUser(1);
-        for (CommentPo po : commentsByUser
+        List<CommentPo> comments = dao.findCommentsByComments(26, 46);
+        for (CommentPo comment : comments
         ) {
-            System.out.println(po.getArticle_id());
-            Timestamp time = dao.findCommentsByTime(po.getArticle_id());
-            System.out.println(time);
+            System.out.println(comment);
         }
+//        List<CommentPo> commentsByUser = dao.findCommentsByUser(1);
     }
 }

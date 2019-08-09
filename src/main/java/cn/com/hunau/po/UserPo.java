@@ -11,8 +11,7 @@ public class UserPo {
     private String user_address;//用户地址
     private String user_signature;//用户个性签名
     private int states;//用户状态  0冻结 1在线 2不在线
-    //用户最近的在线时间
-    private Timestamp user_lastLogin;
+    private Timestamp user_lastLogin;//用户最后一次浏览消息网页的时间
 
     public Timestamp getUser_lastLogin() {
         return user_lastLogin;
@@ -21,6 +20,7 @@ public class UserPo {
     public void setUser_lastLogin(Timestamp user_lastLogin) {
         this.user_lastLogin = user_lastLogin;
     }
+
 
     public int getUser_id() {
         return user_id;

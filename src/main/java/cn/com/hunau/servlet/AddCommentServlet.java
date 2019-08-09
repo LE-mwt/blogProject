@@ -17,6 +17,8 @@ public class AddCommentServlet extends HttpServlet {
         String comment = req.getParameter("comment");
         String parent_id = req.getParameter("parent_id");
         String article_id = req.getParameter("article_id");
+        String user_id = req.getParameter("user_id");
+        int u_id = Integer.parseInt(user_id);
         int a_id = Integer.parseInt(article_id);
         int p_id = 0;
         if (parent_id != null) {
@@ -24,7 +26,7 @@ public class AddCommentServlet extends HttpServlet {
         }
         System.out.println(article_id);
         CommentPo commentPo = new CommentPo();
-        commentPo.setUser_id(1);
+        commentPo.setUser_id(u_id);
         commentPo.setCom_text(comment);
         commentPo.setArticle_id(a_id);
         commentPo.setCom_parentid(p_id);

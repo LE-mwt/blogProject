@@ -18,8 +18,12 @@ public class DetailArticleServlet extends HttpServlet {
         int article_id = Integer.parseInt(id);
         DetailArticleService articleService = ServiceFactory.buildServiceFactory().createDetailArticleService();
         DetailArticleVo article = articleService.findArticleByArticle_id(article_id);
-//        System.out.println("-----------------" + article.getArticle_id());
         req.setAttribute("article", article);
-        req.getRequestDispatcher("/detailArticle.jsp").forward(req, resp);
+//        System.out.println("-----------------" + article.getArticle_id());
+        if (req.getParameter("flag") != null) {
+            req.getRequestDispatcher("/detailArticle01.jsp").forward(req, resp);
+        } else {
+            req.getRequestDispatcher("/detailArticle.jsp").forward(req, resp);
+        }
     }
 }

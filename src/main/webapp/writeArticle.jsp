@@ -85,7 +85,21 @@
             });
         })
     </script>
-
+    <style type="text/css">
+        #badge {
+            padding: 0.1px 3px; /* 不需要定义height与width，添加合适的padding使圆圈随字符长短变化而改变 */
+            line-height: 10px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            font-size: 1px;
+            font-weight: 700;
+            border-radius: 50%;
+            position: relative;
+            bottom: -3px; /*这个改变上下位置*/
+            left: 920px; /*这个值改变左右位置*/
+        }
+    </style>
 </head>
 
 <body id="blog">
@@ -95,45 +109,105 @@
     <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only blog-button"
             data-am-collapse="{target: '#blog-collapse'}"><span class="am-sr-only">导航切换</span> <span
             class="am-icon-bars"></span></button>
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+                <%
+                if(session.getAttribute("user_id")!=null){
+                %>
+                $.ajax({
+                    url: "newMessageServlet?user_id=<%=session.getAttribute("user_id")%>",//后台文件上传接口
+                    type: 'post',
+                    success: function (data) {
+                        if (data > 0) {
+                            // alert(data);
+                            document.getElementById("number").innerHTML += "<span id=\"badge\">" + data + "</span>";
+                        }
+                    }
+                });
+                setInterval(function () {
+                    $.ajax({
+                        url: "newMessageServlet?user_id=<%=session.getAttribute("user_id")%>",//后台文件上传接口
+                        type: 'post',
+                        success: function (data) {
+                            if (data > 0) {
+                                // alert(data);
+                                $("#badge").html(data);
+                            }
+                        }
+                    });
+                }, 10000)
+                <%
+                }
+                %>
+            }
+        );
+    </script>
     <div class="am-collapse am-topbar-collapse" id="blog-collapse">
-        <ul class="am-nav am-nav-pills am-topbar-nav">
-            <li><a href="index.html" style="font-size: 16px">首页</a></li>
-            <li><a href="foundServlet" style="font-size: 16px">发现</a></li>
-            <li><a href="myconcern.html" style="font-size: 16px">我的关注</a></li>
+        <ul class="am-nav am-nav-pills am-topbar-nav" style="font-size: 16px;">
+            <li><a href="indexServlet">首页</a></li>
+            <li><a href="foundServlet">发现</a></li>
+            <%
+                if (session.getAttribute("user_id") != null) {
+            %>
+            <li><a href="myConcernServlet?user_id=<%=session.getAttribute("user_id")%>">我的关注</a></li>
+            <%
+                }
+            %>
+
 
         </ul>
+        <script type="text/javascript">
+            function write() {
+                var userid = <%=session.getAttribute("user_id")%>;
+                alert(userid);
+                if (userid == null) {
+                    alert("请先登录");
+                }
+            }
+        </script>
+        <a href="javascript:void(0)" title="写文章" onclick="write()"><img class="add" src="images/write84.png"
+                                                                        style="height:30px;width:30px"/></a>
+        <%
+            if (session.getAttribute("user_id") != null) {
+        %>
+        <a href="showMessageServlet?user_id=<%=session.getAttribute("user_id")%>" title="我的消息" id="number">
+            <img id="messageNumber" class="add2" src="images/mes84.png"
+                 style="height:30px;width:30px"/></a>
+        <%
+            }
+        %>
 
 
-        <a href="writeArticle.jsp" title="写文章"><img class="add" src="images/write84.png"
-                                                    style="height:30px;width:30px"/></a>
-        <a href="message.html" title="我的消息"><img class="add2" src="images/mes84.png "
-                                                 style="height:30px;width:30px"/></a>
-
-        <div class="dropdown" style="width:170px;margin-top:15px;font-size:16px">
-
+        <div class="dropdown" style="width:170px;font-size: 16px;line-height: px;bottom: -5px;">
+            <%
+                if (session.getAttribute("user_id") != null) {
+            %>
             <!-------------------1.已经登录成功----------------------- -->
-            <span id="hello">美少女</span>，你好！
+            <span id="hello"><%=session.getAttribute("user_name")%></span>，你好！
             <div class="dropdown-content" style="z-index: 999;">
-                <a href="personcenter.html">
+                <a href="personCenterServlet?user_id=<%=session.getAttribute("user_id")%>">
                     <p>个人中心</p>
                 </a>
-                <a href="login.html">
+                <a href="outServlet">
                     <p>退出登录</p>
                 </a>
             </div>
-
-
+            <%
+            } else {
+            %>
             <!-------------------2.没有登录----------------------- -->
-            <!--
-              <span id="hello"><a href="login.html">登录</a></span>
-               -->
+            <span id="hello"><a href="Login.jsp">登录</a></span>
+            <%}%>
         </div>
 
-        <form class="am-topbar-form am-topbar-right am-form-inline" role="search" style="margin-left: 300px;">
+        <form class="am-topbar-form am-topbar-right am-form-inline" role="search" style="margin-left: 300px;"
+              action="./foundServlet" method="post">
             <div class="am-form-group" style="width: 280px;">
-                <input type="text" class="am-form-field am-input-sm" placeholder="输入关键字" style="width: 208px;">
-                <input type="button" value="搜索" id="serach-btn">
+                <input type="text" name="keyword" id="keyword" class="am-form-field am-input-sm" placeholder="输入关键字"
+                       style="width: 208px;" value="${keywords }">
+                <input type="submit" value="搜索" id="serach-btn"
+                       onclick="javascript:window.location.href='foundServlet?pageIndex='+1">
+                <input type="hidden" type="submit" id="pageIndex" name="pageIndex" value="1"/>
             </div>
         </form>
     </div>

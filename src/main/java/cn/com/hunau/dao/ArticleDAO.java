@@ -5,6 +5,15 @@ import cn.com.hunau.po.ArticlePo;
 import java.util.List;
 
 public interface ArticleDAO {
+    /**
+     * 查询我关注的人的所有文章，文章权限为0，按时间排序
+     *
+     * @param user_id    我的用户id
+     * @param currPageNo 当前页面
+     * @param number     每页显示条数
+     * @return
+     */
+    public List<ArticlePo> findMyConcernArticle(int user_id, int currPageNo, int number, String keyword);
 
     /**
      * 查找权限为0的所有文章（按发布时间排序，最新发布的排前面）
@@ -76,5 +85,20 @@ public interface ArticleDAO {
      * @return
      */
     public boolean updateArticleViewCount(int article_id, int viewCount);
+
+    /**
+     * 查找文章总数
+     *
+     * @return
+     */
+    public int findArticleCount();
+
+    /**
+     * 查询网站总浏览量
+     *
+     * @return
+     */
+    public int findWebViewCount();
+
 
 }

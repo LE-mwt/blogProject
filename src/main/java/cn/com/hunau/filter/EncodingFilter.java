@@ -5,10 +5,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EncodingFilter implements Filter {
     private String sourceEncoding = "gb2312";
     private String targetEncoding = "utf-8";
+    private List<String> noFilterList = new ArrayList<String>();
 
     public void destroy() {
     }
@@ -30,6 +33,15 @@ public class EncodingFilter implements Filter {
         }
         if (target != null) {
             this.targetEncoding = target;
+        }
+        String noFilterString = config.getInitParameter("noFilter");
+        if (noFilterString != null) {
+            String[] strs = noFilterString.split(",");
+            if (strs != null) {
+                for (String str : strs) {
+                    this.noFilterList.add(str);
+                }
+            }
         }
     }
 
@@ -60,5 +72,18 @@ public class EncodingFilter implements Filter {
             }
             return value;
         }
+
+        private boolean needFilter() {
+            boolean bool = false;
+
+            String reqName = super.getRequestURI();
+            int index = reqName.lastIndexOf("/");
+            if (index != -1) {
+                reqName = reqName.substring(index + 1);
+                bool = !noFilterList.contains(reqName);
+            }
+            return bool;
+        }
     }
+
 }

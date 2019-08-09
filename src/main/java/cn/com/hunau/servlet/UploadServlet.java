@@ -23,6 +23,7 @@ import java.util.List;
 public class UploadServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Integer user_id = (Integer) req.getSession().getAttribute("user_id");
         //构造一个文章vo
         ArticleVo articleVo = new ArticleVo();
         // 判断是不是上传的form
@@ -81,7 +82,7 @@ public class UploadServlet extends HttpServlet {
                         }
                     }
                 }
-                articleVo.setUser_id(2);
+                articleVo.setUser_id(user_id);
                 System.out.println(articleVo);
                 req.setAttribute("articleVo", articleVo);
             } catch (Exception e) {

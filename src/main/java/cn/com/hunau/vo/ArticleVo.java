@@ -16,8 +16,6 @@ public class ArticleVo extends ArticlePo {
     }
 
     public ArticleVo(ArticlePo articlePo) {
-
-        super();
         this.articlePo = articlePo;
     }
 

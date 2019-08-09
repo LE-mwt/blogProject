@@ -36,7 +36,6 @@ public class MessageServiceImpl implements MessageService {
             UserPo userPo = userDAO.findUserioByUser_id(articlePo.getUser_id());
             ArticleVo articleVo = new ArticleVo();
             articleVo.setUser_name(userPo.getUser_name());
-            articleVo.setUser_name(userPo.getUser_name());
             articleVo.setArticle_cover(articlePo.getArticle_cover());
             articleVo.setArticle_date(articlePo.getArticle_date());
             articleVo.setArticle_id(articlePo.getArticle_id());
@@ -57,7 +56,6 @@ public class MessageServiceImpl implements MessageService {
             messageVo.setDay(transfromTimeToDay(time));
             messageVo.setMin(transfromTimeToMin(time));
             messageVo.setAboutMeArticles(articleVo);
-
             if (user.getUser_lastLogin().getTime() < time.getTime()) {
 //                System.out.println("isNew");
                 messageVo.setNewMessage("isNew");
@@ -177,21 +175,13 @@ public class MessageServiceImpl implements MessageService {
     }
 
     public static void main(String[] args) {
-        List<MessageVo> messageByUser = new MessageServiceImpl().findMessageByUser(2);
-//        Collections.sort(messageByUser, new Comparator<MessageVo>() {
-//            public int compare(MessageVo arg0, MessageVo arg1) {
-//                return arg1.getTheLastTime().compareTo(arg0.getTheLastTime());
-//            }
-//        });
-//        messageByUser = new MessageServiceImpl().removeDupMenu(messageByUser);
-//        List<MessageVo> result = messageByUser.stream().sorted((a, b) -> (int) (a.getTheLastTime().getTime() - b.getTheLastTime().getTime())).collect(Collectors.toList());
+        List<MessageVo> messageByUser = new MessageServiceImpl().findMessageByUser(27969433);
 
         for (MessageVo vo : messageByUser
         ) {
             System.out.println(vo.getAboutMeArticles().getArticle_id());
             System.out.println(vo.getTheLastTime());
             System.out.println(vo.getNewMessage());
-//            System.out.println(vo.getYear() + "-" + vo.getMonth() + "-" + vo.getDay() + "-" + vo.getMin());
         }
     }
 }

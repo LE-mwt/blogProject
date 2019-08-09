@@ -11,6 +11,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -30,7 +31,7 @@
     <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
     <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
     <meta name="msapplication-TileColor" content="#0e90d2">
-
+    <script src="assets/js/jquery.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="css/animate.css" type="text/css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
@@ -45,15 +46,39 @@
         UserPo user = article.getUser();
         List<CommentPo> comments = article.getComments();
     %>
+    <style type="text/css">
+        #badge {
+            padding: 0.1px 3px; /* 不需要定义height与width，添加合适的padding使圆圈随字符长短变化而改变 */
+            line-height: 10px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            font-size: 1px;
+            font-weight: 700;
+            border-radius: 50%;
+            position: relative;
+            bottom: -6px; /*这个改变上下位置*/
+            left: 920px; /*这个值改变左右位置*/
+        }
+    </style>
     <script type="text/javascript">
+        $(window).unload(function () {
+            window.opener.location.reload();
+        });
+
         function showtextarea(data) {
             var something = document.getElementById(data).value;
             if (something) {
-                alert(something);
+                // alert(something);
                 var article_id = <%=article.getArticle_id()%>;
                 $.ajax({
                     url: "addCommentServlet",//后台文件上传接口
-                    data: {"comment": something, "article_id": article_id, "parent_id": data},
+                    data: {
+                        "comment": something,
+                        "article_id": article_id,
+                        "parent_id": data,
+                        "user_id":${sessionScope.user_id}
+                    },
                     type: 'get',
                     success: function () {
                         alert("评论成功");
@@ -69,14 +94,14 @@
                     eles[i].style.display = "none";
                     // alert(eles[i].style.display);
                 }
-                alert(data);
+                // alert(data);
                 document.getElementById(data).style.display = "block";
             }
             return false;
         }
 
         function deleteComment(com_id) {
-            alert(com_id);
+            // alert(com_id);
             $.ajax({
                 url: "deleteCommentServlet",//后台文件上传接口
                 data: {"com_id": com_id},
@@ -101,45 +126,106 @@
     <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only blog-button"
             data-am-collapse="{target: '#blog-collapse'}"><span class="am-sr-only">导航切换</span> <span
             class="am-icon-bars"></span></button>
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+                <%
+                if(session.getAttribute("user_id")!=null){
+                %>
+                $.ajax({
+                    url: "newMessageServlet?user_id=<%=session.getAttribute("user_id")%>",//后台文件上传接口
+                    type: 'post',
+                    success: function (data) {
+                        if (data > 0) {
+                            // alert(data);
+                            document.getElementById("number").innerHTML += "<span id=\"badge\">" + data + "</span>";
+                        }
+                    }
+                });
+                setInterval(function () {
+                    $.ajax({
+                        url: "newMessageServlet?user_id=<%=session.getAttribute("user_id")%>",//后台文件上传接口
+                        type: 'post',
+                        success: function (data) {
+                            if (data > 0) {
+                                // alert(data);
+                                $("#badge").html(data);
+                            }
+                        }
+                    });
+                }, 10000)
+                <%
+                }
+                %>
+            }
+        );
+    </script>
     <div class="am-collapse am-topbar-collapse" id="blog-collapse">
         <ul class="am-nav am-nav-pills am-topbar-nav">
-            <li><a href="index.html">首页</a></li>
+            <li><a href="indexServlet">首页</a></li>
             <li><a href="foundServlet">发现</a></li>
-            <li><a href="myconcern.html">我的关注</a></li>
+            <%
+                if (session.getAttribute("user_id") != null) {
+            %>
+            <li><a href="myConcernServlet?user_id=<%=session.getAttribute("user_id")%>">我的关注</a></li>
+            <%
+                }
+            %>
+
 
         </ul>
+        <script type="text/javascript">
+            function toClick() {
+                var userid = <%=session.getAttribute("user_id")%>;
+                if (userid == null) {
+                    alert("请先登录");
+                } else {
+                    window.open("writeArticle.jsp");
+                }
+            }
+        </script>
+        <a href="javascript:void(0)" title="写文章" onclick="write()"><img class="add" src="images/write84.png"
+                                                                        style="height:30px;width:30px"/></a>
+        <%
+            if (session.getAttribute("user_id") != null) {
+        %>
+        <a href="showMessageServlet?user_id=<%=session.getAttribute("user_id")%>" title="我的消息" id="number">
+            <img id="messageNumber" class="add2" src="images/mes84.png"
+                 style="height:30px;width:30px"/></a>
+        <%
+            }
+        %>
 
-
-        <a href="writeArticle.jsp" title="写文章"><img class="add" src="images/write84.png"
-                                                    style="height:30px;width:30px"/></a>
-        <a href="message.html" title="我的消息"><img class="add2" src="images/mes84.png "
-                                                 style="height:30px;width:30px"/></a>
 
         <div class="dropdown" style="width:170px">
-
+            <%
+                if (session.getAttribute("user_id") != null) {
+            %>
             <!-------------------1.已经登录成功----------------------- -->
-            <span id="hello">美少女</span>，你好！
+            <span id="hello"><%=session.getAttribute("user_name")%></span>，你好！
             <div class="dropdown-content" style="z-index: 999;">
-                <a href="personcenter.html">
+                <a href="personCenterServlet?user_id=<%=session.getAttribute("user_id")%>">
                     <p>个人中心</p>
                 </a>
-                <a href="login.html">
+                <a href="outServlet">
                     <p>退出登录</p>
                 </a>
             </div>
-
-
+            <%
+            } else {
+            %>
             <!-------------------2.没有登录----------------------- -->
-            <!--
-              <span id="hello"><a href="login.html">登录</a></span>
-               -->
+            <span id="hello"><a href="Login.jsp">登录</a></span>
+            <%}%>
         </div>
 
-        <form class="am-topbar-form am-topbar-right am-form-inline" role="search" style="margin-left: 300px;">
+        <form class="am-topbar-form am-topbar-right am-form-inline" role="search" style="margin-left: 300px;"
+              action="./foundServlet" method="post">
             <div class="am-form-group" style="width: 280px;">
-                <input type="text" class="am-form-field am-input-sm" placeholder="搜索" style="width: 208px;">
-                <input type="button" value="搜索" id="serach-btn">
+                <input type="text" name="keyword" id="keyword" class="am-form-field am-input-sm" placeholder="输入关键字"
+                       style="width: 208px;" value="${keywords }">
+                <input type="submit" value="搜索" id="serach-btn"
+                       onclick="javascript:window.location.href='foundServlet?pageIndex='+1">
+                <input type="hidden" type="submit" id="pageIndex" name="pageIndex" value="1"/>
             </div>
         </form>
     </div>
@@ -159,7 +245,7 @@
                     </h1>
                     <p class="am-article-meta blog-text-center">
                         <span><a href="#" class="blog-color"><%=article.getArticle_type()%> &nbsp;</a></span>-
-                        <span><a href="#">@<%=user.getUser_name()%> &nbsp;</a></span>-
+                        <span><a href="personCenterServlet?user_id=<%=user.getUser_id()%>">@<%=user.getUser_name()%> &nbsp;</a></span>-
                         <span><a href="#"><%=article.getArticle_date().toString().substring(0, 10)%></a></span>
                         <img src="images/eyes.png"
                              style="height:20px;width:20px;margin-left:20px;"><span><%=article.getArticle_viewcount()%></span>
@@ -173,16 +259,18 @@
 
 
             <hr>
-            <div class="am-g blog-author blog-article-margin">
-                <div class="am-u-sm-3 am-u-md-3 am-u-lg-2">
-                    <img src=<%=user.getUser_picture()%> alt="" class="blog-author-img am-circle">
+            <a href="personCenterServlet?user_id=<%=user.getUser_id()%>">
+                <div class="am-g blog-author blog-article-margin">
+                    <div class="am-u-sm-3 am-u-md-3 am-u-lg-2">
+                        <img src=<%=user.getUser_picture()%> alt="" class="blog-author-img am-circle">
+                    </div>
+                    <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
+                        <h3><span>作者 &nbsp;: &nbsp;</span><span class="blog-color"><%=user.getUser_name()%></span></h3>
+                        <p><%=user.getUser_signature()%>
+                        </p>
+                    </div>
                 </div>
-                <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
-                    <h3><span>作者 &nbsp;: &nbsp;</span><span class="blog-color"><%=user.getUser_name()%></span></h3>
-                    <p><%=user.getUser_signature()%>
-                    </p>
-                </div>
-            </div>
+            </a>
             <hr>
 
             <hr>
@@ -192,48 +280,45 @@
             <!-- 仅其他用户评论start -->
             <c:forEach items="${article.comments}" var="comments">
                 <div class="streamline b-l b-info m-l-lg m-b padder-v">
+
                     <div>
                         <a class="pull-left thumb-sm avatar m-l-n-md">
                             <img src="${comments.user.user_picture}" class="img-circle" alt="...">
                         </a>
                         <div class="m-l-lg m-b-lg" style="margin-bottom:0px;">
                             <div class="m-b-xs">
-                                <a href="javascript:void(0)" class="h4"
+                                <a href="personCenterServlet?user_id=${comments.user.user_id}" class="h4"
                                    style="color:#148600">${comments.user.user_name}</a>
                                 <c:if test="${comments.user.user_id==article.user.user_id}">
                                     (作者)
                                 </c:if>
-                                    <%--                                <script type="text/javascript">--%>
-                                    <%--                                    alert(${comments.user.user_id});--%>
-                                    <%--                                    alert(<%=user.getUser_id()%>);--%>
-                                    <%--                                    alert(${article.user.user_id});--%>
-                                    <%--                                    alert(${comments.user.user_id==article.user.user_id});--%>
-                                    <%--                                </script>--%>
                                 <span class="text-muted m-l-sm pull-right">
-                                        ${comments.com_time}
+                                        ${fn:substring(comments.com_time, 0, 10)}
                                 </span>
                             </div>
                             <div class="m-b">
                                 <div class="m-b">${comments.com_text}
                                 </div>
-                                <div class="am-form am-g">
+                                <c:if test="${not empty sessionScope.user_id}">
+                                    <div class="am-form am-g">
                                     <textarea id="${comments.com_id}" class="" rows="1" style="display:none"
                                               name="commentByComment"></textarea>
-                                    <button type="button" onclick="showtextarea(this.value)"
-                                            class="am-btn am-btn-default"
-                                            style="padding-left: 8px;padding-top: 4px;padding-right: 8px;padding-bottom: 4px;margin-top: 8px;"
-                                            value="${comments.com_id}">
-                                        回复
-                                    </button>
-                                    <c:if test="${comments.user.user_id==1}">
-                                        <button type="button" onclick="deleteComment(this.value)"
+                                        <button type="button" onclick="showtextarea(this.value)"
                                                 class="am-btn am-btn-default"
                                                 style="padding-left: 8px;padding-top: 4px;padding-right: 8px;padding-bottom: 4px;margin-top: 8px;"
                                                 value="${comments.com_id}">
-                                            删除评论
+                                            回复
                                         </button>
-                                    </c:if>
-                                </div>
+                                        <c:if test="${comments.user.user_id==sessionScope.user_id}">
+                                            <button type="button" onclick="deleteComment(this.value)"
+                                                    class="am-btn am-btn-default"
+                                                    style="padding-left: 8px;padding-top: 4px;padding-right: 8px;padding-bottom: 4px;margin-top: 8px;"
+                                                    value="${comments.com_id}">
+                                                删除评论
+                                            </button>
+                                        </c:if>
+                                    </div>
+                                </c:if>
                             </div>
 
                             <div>
@@ -241,19 +326,22 @@
                                     <div class="m-l-lg m-b-lg" style="margin-bottom:0px;">
                                         <div class="m-b-xs">
                                             <a href class="h4"
+                                               href="personCenterServlet?user_id=${comments.user.user_id}"
                                                style="color:#148600">${comment.user.user_name}</a>
                                             <c:if test="${comment.user.user_id==article.user.user_id}">
                                                 (作者)
                                             </c:if>
                                             <span
                                                     style="color: #000000;font-size: 18px;">回复</span>
-                                            <span class="text-muted m-l-sm pull-right">${comment.com_time}</span>
+                                            <span class="text-muted m-l-sm pull-right">
+                                                    ${fn:substring(comment.com_time, 0, 10)}
+                                            </span>
                                         </div>
                                         <div class="m-b">
                                             <div class="m-b">${comment.com_text}
                                             </div>
                                         </div>
-                                        <c:if test="${comment.user.user_id==1}">
+                                        <c:if test="${comment.user.user_id==sessionScope.user_id}">
                                             <button type="button" onclick="deleteComment(this.value)"
                                                     class="am-btn am-btn-default"
                                                     style="padding-left: 8px;padding-top: 4px;padding-right: 8px;padding-bottom: 4px;margin-top: 8px;"
@@ -279,7 +367,7 @@
                     var article_id = <%=article.getArticle_id()%>;
                     $.ajax({
                         url: "addCommentServlet",//后台文件上传接口
-                        data: {"comment": comment, "article_id": article_id},
+                        data: {"comment": comment, "article_id": article_id, "user_id":${sessionScope.user_id}},
                         type: 'get',
                         success: function () {
                             alert("评论成功");
@@ -290,19 +378,20 @@
                     });
                 }
             </script>
-            <div class="am-form am-g">
-                <div class="am-form-group">
-                    <textarea class="" rows="5" placeholder="我要评论" id="comment_context"></textarea>
+            <c:if test="${not empty sessionScope.user_id}">
+                <div class="am-form am-g">
+                    <div class="am-form-group">
+                        <textarea class="" rows="5" placeholder="我要评论" id="comment_context"></textarea>
+                    </div>
+
+                    <p>
+                        <button type="" class="am-btn am-btn-default" onclick="addComment()" id="article_id"
+                                value="<%=article.getArticle_id()%>">发表评论
+                        </button>
+                    </p>
+                        <%--            </fieldset>--%>
                 </div>
-
-                <p>
-                    <button type="" class="am-btn am-btn-default" onclick="addComment()" id="article_id"
-                            value="<%=article.getArticle_id()%>">发表评论
-                    </button>
-                </p>
-                <%--            </fieldset>--%>
-            </div>
-
+            </c:if>
             <hr>
         </div>
     </div>
@@ -348,7 +437,7 @@
 
 
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="assets/js/jquery.min.js"></script>
+
 <!--<![endif]-->
 <script src="assets/js/amazeui.min.js"></script>
 <!-- <script src="assets/js/app.js"></script> -->

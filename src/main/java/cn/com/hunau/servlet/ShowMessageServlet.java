@@ -22,7 +22,8 @@ public class ShowMessageServlet extends HttpServlet {
         int count = 0;
         for (MessageVo message : messages
         ) {
-            if (message.getNewMessage().equals("isNew")) {
+//            System.out.println(message.getNewMessage());
+            if (message.getNewMessage() != null) {
                 count++;
             }
         }

@@ -51,8 +51,33 @@ public interface ArticleService {
     /**
      * 删除文章
      *
-     * @param articleVo
+     * @param article_id
      * @return
      */
-    boolean deleteArticleByArticle_id(ArticleVo articleVo);
+    boolean deleteArticleByArticle_id(int article_id);
+
+
+    /**
+     * 根据用户名查找出所有关注的人的文章
+     *
+     * @param user_id
+     * @return
+     */
+    List<ArticleVo> findMyConcernArticle(int user_id, int currPage, int number, String keyword);
+
+    /**
+     * 找到浏览量为前多少名的文章
+     *
+     * @param top 前top名
+     * @return
+     */
+    public List<ArticleVo> searchTopArticle(int top);
+
+    /**
+     * 查询自己的所有文章（按发布时间排序，最新发布的排前面）
+     *
+     * @param user_id 本人用户id
+     * @return
+     */
+    public List<ArticleVo> searchMyArticle(int user_id);
 }

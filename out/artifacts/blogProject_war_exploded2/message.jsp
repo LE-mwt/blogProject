@@ -1,5 +1,4 @@
-<%@ page import="cn.com.hunau.vo.MessageVo" %>
-<%@ page import="java.util.List" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: 最帅的LE
   Date: 2019/08/05 0005
@@ -29,7 +28,7 @@
     <meta name="msapplication-TileColor" content="#0e90d2">
     <link rel="stylesheet" href="assets/css/amazeui.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
-
+    <script src="assets/js/jquery.min.js"></script>
 
     <style type="text/css">
 
@@ -49,11 +48,20 @@
             transform: scale(1.3);
         }
 
+        #badge {
+            padding: 0.1px 3px; /* 不需要定义height与width，添加合适的padding使圆圈随字符长短变化而改变 */
+            line-height: 10px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            font-size: 1px;
+            font-weight: 700;
+            border-radius: 50%;
+            position: relative;
+            bottom: -6px; /*这个改变上下位置*/
+            left: 920px; /*这个值改变左右位置*/
+        }
     </style>
-
-    <%
-        List<MessageVo> messagesList = (List<MessageVo>) request.getAttribute("messagesList");
-    %>
 
 </head>
 
@@ -64,57 +72,71 @@
             data-am-collapse="{target: '#blog-collapse'}"><span class="am-sr-only">导航切换</span> <span
             class="am-icon-bars"></span></button>
 
+    <script type="text/javascript">
+        var dd = document.lastModified;
+        // alert(dd);
+        $.ajax({
+            url: "updateLastTimeServlet",//后台文件上传接口
+            type: 'post',
+            data: {'lastTime': dd, 'user_id':${sessionScope.user_id}},
+            success: function () {
+                // location.reload();
+            }
+        });
+
+    </script>
     <div class="am-collapse am-topbar-collapse" id="blog-collapse">
         <ul class="am-nav am-nav-pills am-topbar-nav">
-            <li><a href="index.html">首页</a></li>
+            <li><a href="indexServlet">首页</a></li>
             <li><a href="foundServlet">发现</a></li>
-            <li><a href="myconcern.html">我的关注</a></li>
-
-
+            <li><a href="myConcernServlet?user_id="<%=session.getAttribute("user_id")%>>我的关注</a></li>
         </ul>
-
-
+        <script type="text/javascript">
+            $(document).ready(function () {
+                    var number;
+                    $.ajax({
+                        url: "newMessageServlet?user_id=<%=session.getAttribute("user_id")%>",//后台文件上传接口
+                        type: 'post',
+                        success: function (data) {
+                            if (data > 0) {
+                                number = data;     // alert(data);
+                                document.getElementById("number").innerHTML += "<span id=\"badge\">" + data + "</span>";
+                            }
+                        }
+                    });
+                }
+            );
+        </script>
         <a href="writeArticle.jsp" title="写文章"><img class="add" src="images/write84.png"
                                                     style="height:30px;width:30px"/></a>
-        <a href="message.html" title="我的消息">
-            <%--            <img class="add2" src="images/mes84.png "--%>
-            <%--                                                 style="height:30px;width:30px"/></a>--%>
-            <c:choose>
-                <%--有新消息--%>
-                <%--消息条数为 ${havaNew} --%>
-            <c:when test="${not empty haveNew}">
-            <img class="add2" src="images/mes84.png " style="height:30px;width:30px"/></a>
-        </c:when>
-            <%--无新消息--%>
-        <c:otherwise>
-            <img class="add2" src="images/write84.png " style="height:30px;width:30px"/></a>
-        </c:otherwise>
-        </c:choose>
+        <a href="showMessageServlet?user_id=<%=session.getAttribute("user_id")%>" title="我的消息" id="number">
+            <img id="messageNumber" class="add2" src="images/mes84.png"
+                 style="height:30px;width:30px"/></a>
+
+        <!-- 不能把span改成div，不然宽度会占据整行-->
 
         <div class="dropdown" style="width:170px">
 
             <!-------------------1.已经登录成功----------------------- -->
-            <span id="hello">美少女</span>，你好！
+            <span id="hello"><%=session.getAttribute("user_name")%></span>，你好！
             <div class="dropdown-content" style="z-index: 999;">
-                <a href="personcenter.html">
+                <a href="personCenterServlet?user_id=<%=session.getAttribute("user_id")%>">
                     <p>个人中心</p>
                 </a>
-                <a href="login.html">
+                <a href="outServlet">
                     <p>退出登录</p>
                 </a>
             </div>
-
-
-            <!-------------------2.没有登录----------------------- -->
-            <!--
-              <span id="hello"><a href="login.html">登录</a></span>
-               -->
         </div>
 
-        <form class="am-topbar-form am-topbar-right am-form-inline" role="search" style="margin-left: 300px;">
+        <form class="am-topbar-form am-topbar-right am-form-inline" role="search" style="margin-left: 300px;"
+              action="./foundServlet" method="post">
             <div class="am-form-group" style="width: 280px;">
-                <input type="text" class="am-form-field am-input-sm" placeholder="输入关键字" style="width: 208px;">
-                <input type="button" value="搜索" id="serach-btn">
+                <input type="text" name="keyword" id="keyword" class="am-form-field am-input-sm" placeholder="输入关键字"
+                       style="width: 208px;" value="${keywords }">
+                <input type="submit" value="搜索" id="serach-btn"
+                       onclick="javascript:window.location.href='foundServlet?pageIndex='+1">
+                <input type="hidden" type="submit" id="pageIndex" name="pageIndex" value="1"/>
             </div>
         </form>
     </div>
@@ -125,8 +147,7 @@
 <div class="bback" style="
     position: absolute;
     width: 100%;
-    background: #F6F8F9;"
->
+    background: #F6F8F9;">
     <div class="am-g am-g-fixed blog-fixed blog-content">
         <div class="am-u-sm-12">
 
@@ -134,7 +155,7 @@
                 <c:forEach items="${messagesList}" var="message">
                     <script type="text/javascript">
                         var month;
-                        var m = "<br/><h1 style='margin-top:0px;'>${message.year}年${message.month}月</h1><hr>";
+                        var m = "<br/><br><h1>${message.year}年${message.month}月</h1><hr>";
                         if (month != '${message.month}') {
                             document.getElementById("context").innerHTML += m;
                         }
@@ -142,30 +163,42 @@
                     <ul id="${message.aboutMeArticles.article_id}">
                         <script type="text/javascript">
                             var day;
-                            var s = "<br/><h3 style='margin-top:0px;'>${message.day}日</h3><hr>";
+                            var s = "<br><br/><h3 style='margin-top:0px;'>${message.day}日</h3><hr>";
                             if (day != '${message.day}') {
-                                document.getElementById('${message.aboutMeArticles.article_id}').innerHTML = document.getElementById('${message.aboutMeArticles.article_id}').innerHTML += s;
+                                document.getElementById('${message.aboutMeArticles.article_id}').innerHTML += s;
                             }
                         </script>
                         <li style="line-height: 3;">
                             <span class="am-u-sm-4 am-u-md-2 timeline-span"
                                   style="max-width: 10em;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${message.min}</span>
+                            <span class=" am-u-sm-8 am-u-md-6">
+                                <script type="text/javascript">
+                                    function toClick(value, article_id) {
+                                        value.style.color = 'black';
+
+                                        window.open("detailArticleServlet?article_id=" + article_id + "&flag=1");
+                                    }
+                                </script>
                             <c:choose>
                                 <c:when test="${not empty message.newMessage}">
-                            <span class=" am-u-sm-8 am-u-md-6"><a
-                                    href="#" style="color: red;">${message.aboutMeArticles.article_title}
-                                ("有新消息！")</a>
-                                </span>
+                                    <a target="_blank"
+                                       href="javascript:void(0)"
+                                       style="color: red;"
+                                       onclick="toClick(this,${message.aboutMeArticles.article_id})">
+                                    ${message.aboutMeArticles.article_title}
+                                    ("有新消息！")
                                 </c:when>
                                 <c:otherwise>
-                                    <span class=" am-u-sm-8 am-u-md-6"><a
-                                            href="#">${message.aboutMeArticles.article_title}</a>
-                                        </span>
+                                    <a target="_blank"
+                                       href="javascript:void(0)"
+                                       onclick="toClick(this,${message.aboutMeArticles.article_id})">
+                                    ${message.aboutMeArticles.article_title}
                                 </c:otherwise>
                             </c:choose>
-
+                            </a>
+                            </span>
                             <c:choose>
-                                <c:when test="${!empty message.aboutMeArticles.article_type}">
+                                <c:when test="${not empty message.aboutMeArticles.article_type}">
                                     <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only"
                                           style="max-width: 10em;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; /*超出部分用...代替*/">${message.aboutMeArticles.article_type}</span>
                                 </c:when>
@@ -185,131 +218,6 @@
                     <br/>
                 </c:forEach>
             </div>
-            <%--                <br>--%>
-            <%--                <ul>--%>
-            <%--                    <br>--%>
-            <%--                    <h3>3月</h3>--%>
-            <%--                    <hr>--%>
-            <%--                    <li>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>--%>
-            <%--                        <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>--%>
-            <%--                    </li>--%>
-            <%--                    <li>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>--%>
-            <%--                        <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>--%>
-            <%--                    </li>--%>
-            <%--                    <li>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>--%>
-            <%--                        <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>--%>
-            <%--                    </li>--%>
-            <%--                </ul>--%>
-            <%--                <br>--%>
-            <%--                <ul>--%>
-            <%--                    <br>--%>
-            <%--                    <h3>8月</h3>--%>
-            <%--                    <hr>--%>
-            <%--                    <li>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>--%>
-            <%--                        <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>--%>
-            <%--                    </li>--%>
-            <%--                    <li>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>--%>
-            <%--                        <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>--%>
-            <%--                    </li>--%>
-            <%--                    <li>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>--%>
-            <%--                        <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>--%>
-            <%--                    </li>--%>
-            <%--                </ul>--%>
-            <%--            </div>--%>
-            <%--            <div class="timeline-year">--%>
-            <%--                <h1>2014</h1>--%>
-            <%--                <hr>--%>
-            <%--                <ul>--%>
-            <%--                    <h3>9月</h3>--%>
-            <%--                    <hr>--%>
-            <%--                    <li>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 timeline-span">2015/10/18</span>--%>
-            <%--                        <span class="am-u-sm-8 am-u-md-6"><a href="#">君埋泉下泥销骨，我寄人间雪满头</a></span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">风又起</span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">amazeui</span>--%>
-            <%--                    </li>--%>
-            <%--                    <li>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 timeline-span">2015/10/10</span>--%>
-            <%--                        <span class="am-u-sm-8 am-u-md-6"><a href="#">不为无益之事，何以遣有涯之生。</a></span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">灯火阑珊</span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">LWXYFER</span>--%>
-            <%--                    </li>--%>
-            <%--                    <li>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 timeline-span">2015/10/5</span>--%>
-            <%--                        <span class="am-u-sm-8 am-u-md-6"><a href="#">一想到你，我这张丑脸上就泛起微笑</a></span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">凌晨四点钟</span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">二师兄</span>--%>
-            <%--                    </li>--%>
-            <%--                </ul>--%>
-            <%--                <br>--%>
-            <%--                <ul>--%>
-            <%--                    <br>--%>
-            <%--                    <h3>8月</h3>--%>
-            <%--                    <hr>--%>
-            <%--                    <li>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>--%>
-            <%--                        <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>--%>
-            <%--                    </li>--%>
-            <%--                    <li>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>--%>
-            <%--                        <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>--%>
-            <%--                    </li>--%>
-            <%--                    <li>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>--%>
-            <%--                        <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>--%>
-            <%--                    </li>--%>
-            <%--                </ul>--%>
-            <%--                <br>--%>
-            <%--                <ul>--%>
-            <%--                    <br>--%>
-            <%--                    <h3>7月</h3>--%>
-            <%--                    <hr>--%>
-            <%--                    <li>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>--%>
-            <%--                        <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>--%>
-            <%--                    </li>--%>
-            <%--                    <li>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>--%>
-            <%--                        <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>--%>
-            <%--                    </li>--%>
-            <%--                    <li>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 timeline-span">时间</span>--%>
-            <%--                        <span class="am-u-sm-8 am-u-md-6"><a href="#">我的标题</a></span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">分类目录</span>--%>
-            <%--                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">作者</span>--%>
-            <%--                    </li>--%>
-            <%--                </ul>--%>
-            <%--            </div>--%>
-
-
             <hr>
         </div>
 
@@ -334,16 +242,6 @@
     }
 
 </style>
-
-
-<!--[if (gte IE 9)|!(IE)]><!-->
-<script src="assets/js/jquery.min.js"></script>
-<!--<![endif]-->
-<!--[if lte IE 8 ]>
-<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
-<![endif]-->
 <script src="assets/js/amazeui.min.js"></script>
 <!-- <script src="assets/js/app.js"></script> -->
 </body>

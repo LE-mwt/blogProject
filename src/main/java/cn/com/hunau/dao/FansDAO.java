@@ -34,4 +34,12 @@ public interface FansDAO {
      */
     public boolean reduceFans(int user_id, int fan_id);
 
+    /**
+     * 判断是否关注了该用户
+     *
+     * @param user_id 其他用户
+     * @param fan_id  自己
+     * @return
+     */
+    boolean checkFans(int user_id, int fan_id);
 }

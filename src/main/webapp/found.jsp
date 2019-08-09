@@ -3,11 +3,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="assets/js/jquery.min.js"></script>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -25,7 +27,21 @@
     <meta name="msapplication-TileColor" content="#0e90d2">
     <link rel="stylesheet" href="assets/css/amazeui.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
-
+    <style type="text/css">
+        #badge {
+            padding: 0.1px 3px; /* 不需要定义height与width，添加合适的padding使圆圈随字符长短变化而改变 */
+            line-height: 10px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            font-size: 1px;
+            font-weight: 700;
+            border-radius: 50%;
+            position: relative;
+            bottom: -3px; /*这个改变上下位置*/
+            left: 920px; /*这个值改变左右位置*/
+        }
+    </style>
     <script type="text/javascript">
         function page_nav(frm, num) {
             frm.pageIndex.value = num;
@@ -48,43 +64,98 @@
     <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only blog-button"
             data-am-collapse="{target: '#blog-collapse'}"><span class="am-sr-only">导航切换</span> <span
             class="am-icon-bars"></span></button>
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+                <%
+                if(session.getAttribute("user_id")!=null){
+                %>
+                $.ajax({
+                    url: "newMessageServlet?user_id=<%=session.getAttribute("user_id")%>",//后台文件上传接口
+                    type: 'post',
+                    success: function (data) {
+                        if (data > 0) {
+                            // alert(data);
+                            document.getElementById("number").innerHTML += "<span id=\"badge\">" + data + "</span>";
+                        }
+                    }
+                });
+                setInterval(function () {
+                    $.ajax({
+                        url: "newMessageServlet?user_id=<%=session.getAttribute("user_id")%>",//后台文件上传接口
+                        type: 'post',
+                        success: function (data) {
+                            if (data > 0) {
+                                // alert(data);
+                                $("#badge").html(data);
+                            }
+                        }
+                    });
+                }, 10000)
+                <%
+                }
+                %>
+            }
+        );
+    </script>
     <div class="am-collapse am-topbar-collapse" id="blog-collapse">
         <ul class="am-nav am-nav-pills am-topbar-nav">
-            <li><a href="index.html">首页</a></li>
-            <li class="am-active"><a href="found.jsp">发现</a></li>
-            <li><a href="myconcern.html">我的关注</a></li>
-
-
+            <li><a href="indexServlet">首页</a></li>
+            <li class="am-active"><a href="foundServlet">发现</a></li>
+            <%
+                if (session.getAttribute("user_id") != null) {
+            %>
+            <li><a href="myConcernServlet?user_id=<%=session.getAttribute("user_id")%>">我的关注</a></li>
+            <%
+                }
+            %>
         </ul>
+        <script type="text/javascript">
+            function toClick() {
+                var userid = <%=session.getAttribute("user_id")%>;
+                if (userid == null) {
+                    alert("请先登录");
+                } else {
+                    window.open("writeArticle.jsp");
+                }
+            }
+        </script>
+        <a href="javascript:void(0)" title="写文章" onclick="toClick()"><img class="add" src="images/write84.png"
+                                                                          style="height:30px;width:30px"/></a>
+        <%
+            if (session.getAttribute("user_id") != null) {
+        %>
+        <a href="showMessageServlet?user_id=<%=session.getAttribute("user_id")%>" title="我的消息" id="number">
+            <img id="messageNumber" class="add2" src="images/mes84.png"
+                 style="height:30px;width:30px"/></a>
+        <%
+            }
+        %>
 
-        <a href="writeArticle.jsp" title="写文章"><img class="add" src="images/write84.png"
-                                                    style="height:30px;width:30px"/></a>
-        <a href="message.html" title="我的消息"><img class="add2" src="images/mes84.png "
-                                                 style="height:30px;width:30px"/></a>
 
         <div class="dropdown" style="width:170px">
-
+            <%
+                if (session.getAttribute("user_id") != null) {
+            %>
             <!-------------------1.已经登录成功----------------------- -->
-            <span id="hello">美少女</span>，你好！
+            <span id="hello"><%=session.getAttribute("user_name")%></span>，你好！
             <div class="dropdown-content" style="z-index: 999;">
-                <a href="personcenter.html">
+                <a href="personCenterServlet?user_id=<%=session.getAttribute("user_id")%>">
                     <p>个人中心</p>
                 </a>
-                <a href="login.html">
+                <a href="outServlet">
                     <p>退出登录</p>
                 </a>
             </div>
-
-
+            <%
+            } else {
+            %>
             <!-------------------2.没有登录----------------------- -->
-            <!--
-              <span id="hello"><a href="login.html">登录</a></span>
-               -->
+            <span id="hello"><a href="Login.jsp">登录</a></span>
+            <%}%>
         </div>
 
         <form class="am-topbar-form am-topbar-right am-form-inline" role="search" style="margin-left: 300px;"
-              action="./foundServlet" method="post">
+              action="foundServlet" method="post">
             <div class="am-form-group" style="width: 280px;">
                 <input type="text" name="keyword" id="keyword" class="am-form-field am-input-sm" placeholder="输入关键字"
                        style="width: 208px;" value="${keywords }">
@@ -118,10 +189,11 @@
                     </div>
                     <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
                         <span><a href="" class="blog-color">${article.article_type } &nbsp;</a></span>
-                        <span>@<a href="#">${article.user_name } &nbsp;</a></span>
-                        <span>${article.article_date }</span>
+                        <span>@<a href="personCenterServlet?user_id=${article.user_id}">${article.user_name } &nbsp;</a></span>
+                        <span>${fn:substring(article.article_date, 0, 10)}</span>
                         <h1>
-                            <a href="detailArticleServlet?article_id=${article.article_id}">${article.article_title }</a>
+                            <a target="_blank"
+                               href="detailArticleServlet?article_id=${article.article_id}">${article.article_title }</a>
                         </h1>
                         <p>${article.article_context }
                         </p>
@@ -216,13 +288,7 @@
 
 
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="assets/js/jquery.min.js"></script>
-<!--<![endif]-->
-<!--[if lte IE 8 ]>
-<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
-<![endif]-->
+
 <script src="assets/js/amazeui.min.js"></script>
 <!-- <script src="assets/js/app.js"></script> -->
 </body>

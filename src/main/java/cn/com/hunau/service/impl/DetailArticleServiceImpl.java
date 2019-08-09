@@ -66,7 +66,7 @@ public class DetailArticleServiceImpl implements DetailArticleService {
 
     public static void main(String[] args) {
         DetailArticleService service = ServiceFactory.buildServiceFactory().createDetailArticleService();
-        DetailArticleVo article = service.findArticleByArticle_id(1);
-        System.out.println(article.getArticle_viewcount());
+        DetailArticleVo article = service.findArticleByArticle_id(26);
+        System.out.println(article.getComments());
     }
 }

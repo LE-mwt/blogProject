@@ -54,8 +54,6 @@
             //     alert("当前已是第1页")
             // }
             frm.submit();
-
-
         }
 
     </script>
@@ -172,15 +170,17 @@
         </div>
 
         <form class="am-topbar-form am-topbar-right am-form-inline" role="search" style="margin-left: 300px;"
-              action="foundServlet" method="post">
+              action="myConcernServlet" method="post">
             <div class="am-form-group" style="width: 280px;">
                 <input type="text" name="keyword" id="keyword" class="am-form-field am-input-sm" placeholder="输入关键字"
                        style="width: 208px;" value="${keywords }">
                 <input type="submit" value="搜索" id="serach-btn"
-                       onclick="javascript:window.location.href='foundServlet?pageIndex='+1">
+                       onclick="javascript:window.location.href='myConcernServlet?pageIndex='+1+'&user_id='+${user_id}">
                 <input type="hidden" type="submit" id="pageIndex" name="pageIndex" value="1"/>
+                <input type="hidden" type="submit" id="user_id" name="user_id" value="1"/>
             </div>
         </form>
+
     </div>
 </nav>
 <hr>

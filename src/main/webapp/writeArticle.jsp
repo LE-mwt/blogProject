@@ -235,7 +235,7 @@
                 <div class="am-u-sm-9">
                     <div class="control-group" style="position: unset">
                         <div class="col-md-9" id="imgarea">
-                            <img id="img" src="" width="100px" height="100px">
+                            <img id="img" src="" width="350px" height="150px">
                         </div>
                     </div>
                     <div class="control-group" style="position: unset">

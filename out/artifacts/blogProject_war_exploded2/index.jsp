@@ -43,14 +43,14 @@
 </head>
 
 <body id="blog">
-<script type="text/javascript">
-    $(window).unload(function () {
-        $.ajax({
-            type: 'post',
-            url: 'updateUnOnlineServlet?user_id=${user_id}'
-        });
-    });
-</script>
+<%--<script type="text/javascript">--%>
+<%--    $(window).unload(function () {--%>
+<%--        $.ajax({--%>
+<%--            type: 'post',--%>
+<%--            url: 'updateUnOnlineServlet?user_id=${user_id}'--%>
+<%--        });--%>
+<%--    });--%>
+<%--</script>--%>
 
 
 <hr>

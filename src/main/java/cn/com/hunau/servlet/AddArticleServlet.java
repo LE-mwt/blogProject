@@ -25,8 +25,8 @@ public class AddArticleServlet extends HttpServlet {
         if (article_id != 0) {
             System.out.println("插入成功");
             msg = "发布成功";
-//            url = "/detailArticle.jsp";
-            url = "/detailArticleServlet?article_id=" + article_id;
+            url = "/detailArticle01.jsp";
+//            url = "/detailArticleServlet?article_id=" + article_id;
             //获取插入的文章的内容
             DetailArticleService detailArticleService = ServiceFactory.buildServiceFactory().createDetailArticleService();
             DetailArticleVo article = detailArticleService.findArticleByArticle_id(article_id);

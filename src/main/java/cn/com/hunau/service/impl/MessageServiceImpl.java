@@ -56,6 +56,9 @@ public class MessageServiceImpl implements MessageService {
             messageVo.setDay(transfromTimeToDay(time));
             messageVo.setMin(transfromTimeToMin(time));
             messageVo.setAboutMeArticles(articleVo);
+            if (user.getUser_lastLogin() == null) {
+                user.setUser_lastLogin(time);
+            }
             if (user.getUser_lastLogin().getTime() < time.getTime()) {
 //                System.out.println("isNew");
                 messageVo.setNewMessage("isNew");
@@ -84,6 +87,9 @@ public class MessageServiceImpl implements MessageService {
             Timestamp time = commentDAO.findCommentsByTime(po.getArticle_id());
             if (time == null) {
                 time = po.getArticle_date();
+            }
+            if (user.getUser_lastLogin() == null) {
+                user.setUser_lastLogin(time);
             }
             if (user.getUser_lastLogin().getTime() < time.getTime()) {
 //                System.out.println("isNew");

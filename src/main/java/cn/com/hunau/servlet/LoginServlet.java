@@ -90,7 +90,7 @@ public class LoginServlet extends HttpServlet {
             } else if (userexit == false) {
                 response.setContentType("text/html;charset=UTF-8");
                 PrintWriter out = response.getWriter();
-                out.println("<script>alert('用户名不存在，请重新登录' );window.location.href='Login.jsp'</script>");
+                out.println("<script>alert('账号不存在，请重新登录' );window.location.href='Login.jsp'</script>");
                 out.flush();
                 out.close();
 
